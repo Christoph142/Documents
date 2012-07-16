@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+<html>
+<head>
+	<title>Documents</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="javascript/language.js"></script>
+    <script type="text/javascript" src="javascript/prefs.js"></script>
+</head>
+
+<body onLoad="adjustlanguage(); getprefs();">
+
+<div id="lang_container">
+    <div id="lang" class="done" onClick="lang_menu(this);">
+        <img id="current_lang" src="images/auto.jpg" title="change to another language">
+        <br>
+        <img src="images/curly_braces.png" style="box-shadow:none; -o-transform:none; cursor:default;">
+        <br>
+        <img src="images/auto.jpg" title="auto-detect" onClick="change_lang('auto');"><br>
+        <img src="images/en.jpg" title="english" onClick="change_lang('en');"><br>
+        <img src="images/de.jpg" title="deutsch" onClick="change_lang('de');"><br>
+        <img src="images/fr.jpg" title="français" onClick="change_lang('fr');"><br>
+        <img src="images/nb.jpg" title="norsk" onClick="change_lang('nb');"><br>
+        <img src="images/pl.jpg" title="polski" onClick="change_lang('pl');"><br>
+        <img src="images/ru.jpg" title="русский" onClick="change_lang('ru');"><br>
+        <img src="images/ar.jpg" title="عربي" onClick="change_lang('ar');">
+    </div>
+</div>
+
+<header>
+	<img src="images/icon.png">
+    <h1 id="widget-name">Documents</h1>
+    <h3>Made by <a href="http://my.opera.com/christoph142/blog/" target="_blank" style="background-color:transparent;">Christoph142</a></h3>
+</header>
+
+<section>
+    <h3>#Options#</h3>
+    <fieldset>
+    <p>#choosedocs#<br></p>
+    <table width="100%"><tr><td>
+    <input type="radio" name="pdf" value="0" id="pdf0" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
+    <input type="radio" name="pdf" value="1" id="pdf1" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
+    <input type="radio" name="pdf" value="2" id="pdf2" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
+    <label for="pdf" onClick="alert('wanted: '+widget.preferences.wanted_docs+'   extended: '+widget.preferences.extended_docs);">PDF</label><br>
+   	<input type="radio" name="doc" value="0" id="doc0" onClick="widget.preferences.doc=this.value; set_wanted_docs();">
+    <input type="radio" name="doc" value="1" id="doc1" onClick="widget.preferences.doc=this.value; set_wanted_docs();">
+    <input type="radio" name="doc" value="2" id="doc2" onClick="widget.preferences.doc=this.value; set_wanted_docs();">
+    <label for="doc">Word (.doc, .docx)</label><br>
+    <input type="radio" name="xls" value="0" id="xls0" onClick="widget.preferences.xls=this.value; set_wanted_docs();">
+    <input type="radio" name="xls" value="1" id="xls1" onClick="widget.preferences.xls=this.value; set_wanted_docs();">
+    <input type="radio" name="xls" value="2" id="xls2" onClick="widget.preferences.xls=this.value; set_wanted_docs();">
+    <label for="xls">Excel (.xls, .xlsx)</label><br>
+    <input type="radio" name="ppt" value="0" id="ppt0" onClick="widget.preferences.ppt=this.value; set_wanted_docs();">
+    <input type="radio" name="ppt" value="1" id="ppt1" onClick="widget.preferences.ppt=this.value; set_wanted_docs();">
+    <input type="radio" name="ppt" value="2" id="ppt2" onClick="widget.preferences.ppt=this.value; set_wanted_docs();">
+    <label for="ppt">Powerpoint (.ppt, .pptx)</label><br>
+    <input type="radio" name="odt" value="0" id="odt0" onClick="widget.preferences.odt=this.value; set_wanted_docs();">
+    <input type="radio" name="odt" value="1" id="odt1" onClick="widget.preferences.odt=this.value; set_wanted_docs();">
+    <input type="radio" name="odt" value="2" id="odt2" onClick="widget.preferences.odt=this.value; set_wanted_docs();">
+    <label for="odt">Open Office (.odt, .ods)</label><br>
+    <input type="radio" name="pages" value="0" id="pages0" onClick="widget.preferences.pages=this.value; set_wanted_docs();">
+    <input type="radio" name="pages" value="1" id="pages1" onClick="widget.preferences.pages=this.value; set_wanted_docs();">
+    <input type="radio" name="pages" value="2" id="pages2" onClick="widget.preferences.pages=this.value; set_wanted_docs();">
+    <label for="pages">Apple Pages</label><br>
+    <input type="radio" name="ai" value="0" id="ai0" onClick="widget.preferences.ai=this.value; set_wanted_docs();">
+    <input type="radio" name="ai" value="1" id="ai1" onClick="widget.preferences.ai=this.value; set_wanted_docs();">
+    <input type="radio" name="ai" value="2" id="ai2" onClick="widget.preferences.ai=this.value; set_wanted_docs();">
+    <label for="ai">Adobe Illustrator (.ai)</label><br><br>
+    </td><td>
+    <input type="radio" name="psd" value="0" id="psd0" onClick="widget.preferences.psd=this.value; set_wanted_docs();">
+    <input type="radio" name="psd" value="1" id="psd1" onClick="widget.preferences.psd=this.value; set_wanted_docs();">
+    <input type="radio" name="psd" value="2" id="psd2" onClick="widget.preferences.psd=this.value; set_wanted_docs();">
+    <label for="psd">Adobe Photoshop (.psd)</label><br>
+    <input type="radio" name="tiff" value="0" id="tiff0" onClick="widget.preferences.tiff=this.value; set_wanted_docs();">
+    <input type="radio" name="tiff" value="1" id="tiff1" onClick="widget.preferences.tiff=this.value; set_wanted_docs();">
+    <input type="radio" name="tiff" value="2" id="tiff2" onClick="widget.preferences.tiff=this.value; set_wanted_docs();">
+    <label for="tiff">Tagged Image File (.tiff)</label><br>
+    <input type="radio" name="dxf" value="0" id="dxf0" onClick="widget.preferences.dxf=this.value; set_wanted_docs();">
+    <input type="radio" name="dxf" value="1" id="dxf1" onClick="widget.preferences.dxf=this.value; set_wanted_docs();">
+    <input type="radio" name="dxf" value="2" id="dxf2" onClick="widget.preferences.dxf=this.value; set_wanted_docs();">
+    <label for="dxf">Autodesk AutoCad (.dxf)</label><br>
+    <input type="radio" name="svg" value="0" id="svg0" onClick="widget.preferences.svg=this.value; set_wanted_docs();">
+    <input type="radio" name="svg" value="1" id="svg1" onClick="widget.preferences.svg=this.value; set_wanted_docs();">
+    <input type="radio" name="svg" value="2" id="svg2" onClick="widget.preferences.svg=this.value; set_wanted_docs();">
+    <label for="svg">Scalable Vector Graphics (.svg)</label><br>
+    <input type="radio" name="eps" value="0" id="eps0" onClick="widget.preferences.eps=this.value; set_wanted_docs();">
+    <input type="radio" name="eps" value="1" id="eps1" onClick="widget.preferences.eps=this.value; set_wanted_docs();">
+    <input type="radio" name="eps" value="2" id="eps2" onClick="widget.preferences.eps=this.value; set_wanted_docs();">
+    <label for="eps">PostScript (.eps, .ps)</label><br>
+    <input type="radio" name="ttf" value="0" id="ttf0" onClick="widget.preferences.ttf=this.value; set_wanted_docs();">
+    <input type="radio" name="ttf" value="1" id="ttf1" onClick="widget.preferences.ttf=this.value; set_wanted_docs();">
+    <input type="radio" name="ttf" value="2" id="ttf2" onClick="widget.preferences.ttf=this.value; set_wanted_docs();">
+    <label for="ttf">Fonts (.ttf, .otf)</label><br>
+    <input type="radio" name="xps" value="0" id="xps0" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
+    <input type="radio" name="xps" value="1" id="xps1" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
+    <input type="radio" name="xps" value="2" id="xps2" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
+    <label for="xps">XML Paper Specification (.xps)</label><br><br>
+    </td></tr></table>
+    <input type="radio" value="0"> = #0#<br>
+    <input type="radio" value="1"> = #1#<br>
+    <input type="radio" value="2"> = #2#
+    </fieldset>
+    <br>
+    <fieldset><p>#manual_setup_instruction#</p></fieldset>
+</section>
+
+<footer>
+    <p>#footer# :)<br><br></p>
+</footer>
+  
+</body>
+</html>
