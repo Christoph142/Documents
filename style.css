@@ -19,6 +19,8 @@ input[type=radio][value="0"]{ background-color:#FF643E; border:1px solid rgba(0,
 input[type=radio][value="1"]{ background-color:#CF0; border:1px solid rgba(0,0,0,0); border-radius:10px; }
 input[type=radio][value="2"]{ background-color:#94DF40; border:1px solid rgba(0,0,0,0); border-radius:10px; }
 
+#multicol	{ columns:260px; }
+
 #lang_container	{ height:0px; width:100%; overflow:visible; text-align:right;}
 #lang img	{ width:50px; cursor:pointer; box-shadow:0px 0px 4px #98b0c9; -o-transition:200ms; }
 #lang img:hover{ box-shadow:0px 0px 4px #335341; -o-transform:scale(1.1,1.1); }

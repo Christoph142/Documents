@@ -37,7 +37,7 @@
     <h3>#Options#</h3>
     <fieldset>
     <p>#choosedocs#<br></p>
-    <table width="100%"><tr><td>
+    <p id="multicol">
     <input type="radio" name="pdf" value="0" id="pdf0" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
     <input type="radio" name="pdf" value="1" id="pdf1" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
     <input type="radio" name="pdf" value="2" id="pdf2" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
@@ -65,8 +65,7 @@
     <input type="radio" name="ai" value="0" id="ai0" onClick="widget.preferences.ai=this.value; set_wanted_docs();">
     <input type="radio" name="ai" value="1" id="ai1" onClick="widget.preferences.ai=this.value; set_wanted_docs();">
     <input type="radio" name="ai" value="2" id="ai2" onClick="widget.preferences.ai=this.value; set_wanted_docs();">
-    <label for="ai">Adobe Illustrator (.ai)</label><br><br>
-    </td><td>
+    <label for="ai">Adobe Illustrator (.ai)</label><br>
     <input type="radio" name="psd" value="0" id="psd0" onClick="widget.preferences.psd=this.value; set_wanted_docs();">
     <input type="radio" name="psd" value="1" id="psd1" onClick="widget.preferences.psd=this.value; set_wanted_docs();">
     <input type="radio" name="psd" value="2" id="psd2" onClick="widget.preferences.psd=this.value; set_wanted_docs();">
@@ -94,8 +93,8 @@
     <input type="radio" name="xps" value="0" id="xps0" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
     <input type="radio" name="xps" value="1" id="xps1" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
     <input type="radio" name="xps" value="2" id="xps2" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
-    <label for="xps">XML Paper Specification (.xps)</label><br><br>
-    </td></tr></table>
+    <label for="xps">XML Paper Specification (.xps)</label>
+    </p>
     <input type="radio" value="0"> = #0#<br>
     <input type="radio" value="1"> = #1#<br>
     <input type="radio" value="2"> = #2#
