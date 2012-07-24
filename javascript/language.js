@@ -24,12 +24,12 @@ function adjustlanguage(){
 	}
 	else if(language=="nb"){
 		b = b.replace(/#Options#/,"Valg");
-	 	b = b.replace(/#choosedocs#/,"Hvilke dokumenttyper ønsker du å åpne i denne utvidelsen?");
-		b = b.replace(/#0#/,"not handled by Documents");
-		b = b.replace(/#1#/,"basic function (links are opened with Documents; standard)");
-		b = b.replace(/#2#/,"extended function (basic + extended functions; choose if you did the additional setup (see below))");
-		b = b.replace(/#manual_setup_instruction#/,"To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)");
-	    b = b.replace(/#footer#/,"For å gi tilbakemeldinger og be om hjelp, ikke nøl med å kontakte meg<br>takk til<a href='http://my.opera.com/daniel' target='_blank' style='background-color:transparent;'>Daniel</a>for å oversette!");
+	 	b = b.replace(/#choosedocs#/,"Hvilke dokumenttyper ønsker du å åpne med denne utvidelsen?");
+		b = b.replace(/#0#/,"ikke håndtert av Dokumenter");
+		b = b.replace(/#1#/,"standard funksjonalitet (lenker er åpnet med Dokumenter; forhåndsvalgt)");
+		b = b.replace(/#2#/,"utvidet funksjonalitet (standard og utvidede funksjoner; velg dette om du har gjort andre valg (se under))");
+		b = b.replace(/#manual_setup_instruction#/,"Gjør følgende for å få lenker—som du har dratt og limt inn i adressefeltet eller valgt i historievisning—til å fungere:<br>1. Instillinger -> Valg (Ctrl+F12) -> Avansert -> Nedlastninger<br>2. avmerk 'skjul filtyper som åpnes med Opera'<br>3. velg en hvilkensomhelst støttet utvidelse fra listen (f.eks. pdf) og trykk Endre<br>4. velg 'Åpne med Opera' og klikk OK<br><br>Gjenta steg 3–4 for alle støttede filtyper. Trykk til slutt OK for å lukke Instillinger. Velg så utvidet funksjonalitet for de samme filtypene i valg for Dokumenter og du er ferdig :)");
+	    b = b.replace(/#footer#/,"For å gi tilbakemeldinger og be om hjelp, ikke nøl med å kontakte meg<br>takk til<a href='https://twitter.com/Aeyoun' target='_blank' style='background-color:transparent;'>Daniel</a>for oversettelsen!");
 	}
 	else if(language=="pl"){
 		b = b.replace(/#Options#/,"Ustawienia");
