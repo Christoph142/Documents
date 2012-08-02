@@ -122,6 +122,9 @@ UpgradeLog*.XML
 
 # Windows image file caches
 Thumbs.db
+.gitignore
+.gitattributes
+.oex
 
 # Folder config file
 Desktop.ini
