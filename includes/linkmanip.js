@@ -5,7 +5,7 @@
 // @exclude http://www.megalab.it/*
 // ==/UserScript==
 
-////////////////////////////////// Documents 1.2 by Christoph142 //////////////////////////////////
+//////////////////////////////////// Documents by Christoph142 ////////////////////////////////////
 //                                                                                               //
 // You're welcome to use or modify this code (or parts of it) for your personal use as a userjs  //
 //              but please refrain from copying its functionality to other extensions            //
