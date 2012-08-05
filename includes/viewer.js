@@ -37,14 +37,16 @@ window.addEventListener('DOMContentLoaded', function(){
 	document.getElementById(":i").outerHTML = "";
 	document.getElementById(":m").id = "bugreport";
 	document.getElementById("bugreport").firstChild.innerHTML = "Report an issue";
-	document.getElementById("bugreport").onclick = "javascript:window.open('https://addons.opera.com/extensions/details/documents/?reports#feedback-container');";
-	document.getElementById("bugreport").onmouseover = "this.style.backgroundColor = '#eee';";
-	document.getElementById("bugreport").onmouseout = "this.style.backgroundColor = '#fff';";
+	document.getElementById("bugreport").onclick = function(){
+		window.open("https://addons.opera.com/extensions/details/documents/?reports#feedback-container"); };
+	document.getElementById("bugreport").onmouseover = function(){ this.style.backgroundColor = "#eee"; };
+	document.getElementById("bugreport").onmouseout = function(){ this.style.backgroundColor = "#fff"; };
 	document.getElementById(":n").id = "rate_extension";
 	document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
-	document.getElementById("rate_extension").onclick = "javascript:window.open('https://addons.opera.com/extensions/details/documents/#feedback-container');";
-	document.getElementById("rate_extension").onmouseover = "this.style.backgroundColor = '#eee';";
-	document.getElementById("rate_extension").onmouseout = "this.style.backgroundColor = '#fff';";
+	document.getElementById("rate_extension").onclick = function(){
+		window.open("https://addons.opera.com/extensions/details/documents/#feedback-container"); };
+	document.getElementById("rate_extension").onmouseover = function(){ this.style.backgroundColor = "#eee"; };
+	document.getElementById("rate_extension").onmouseout = function(){ this.style.backgroundColor = "#fff"; };
 	
 	// grey control bar:
 	document.getElementById("controlbar").style.position = "fixed"; 
