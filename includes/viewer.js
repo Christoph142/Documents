@@ -1,5 +1,5 @@
 // ==UserScript==
-// @include https://docs.google.com/viewer?docex=1&url=*
+// @include https://docs.google.com/viewer?docex=1&*
 // ==/UserScript==
 
 window.addEventListener('DOMContentLoaded', function(){
@@ -116,7 +116,7 @@ function mouse_pos(){
 }
 
 function localize_it(savebutton){
-	if(window.navigator.language=="de"){
+	if(widget.preferences.lang == "de" || ((!widget.preferences.lang || widget.preferences.lang=="auto") && window.navigator.language=="de")){
 		document.getElementById("bugreport").firstChild.innerHTML = "Melde einen Fehler";
 		document.getElementById("rate_extension").firstChild.innerHTML = "Bewerte Documents";
 		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
@@ -128,7 +128,7 @@ function localize_it(savebutton){
 			savebutton.setAttribute("aria-label", "klicke hier mit der rechten Maustaste und wähle \"Verlinkten Inhalt speichern als...\" um die Datei zu speichern");
 		}
 	}
-	else if(window.navigator.language=="fr"){
+	else if(widget.preferences.lang == "fr" || ((!widget.preferences.lang || widget.preferences.lang=="auto") && window.navigator.language=="fr")){
 		document.getElementById("bugreport").firstChild.innerHTML = "Rapporte une erreur";
 		document.getElementById("rate_extension").firstChild.innerHTML = "Evalue Documents";
 		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){

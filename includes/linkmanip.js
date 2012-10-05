@@ -18,8 +18,12 @@ window.addEventListener('DOMContentLoaded', function(){
 	var all_links = document.getElementsByTagName("a");
 	for(i=0;i<all_links.length;i++){
 		
-		if(all_links[i].href.match(wanted_docs)&&all_links[i].href.match(/\?/)==null)
-			document.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&url="+document.getElementsByTagName("a")[i].href;
+		if(all_links[i].href.match(wanted_docs)&&all_links[i].href.match(/\?/)==null){
+			if(widget.preferences.lang!=undefined && widget.preferences.lang!="auto")
+				document.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&hl="+widget.preferences.lang+"&url="+document.getElementsByTagName("a")[i].href;
+			else
+				document.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&url="+document.getElementsByTagName("a")[i].href;
+		}
 	}
 	
 }, false);
