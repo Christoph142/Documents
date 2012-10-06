@@ -2,9 +2,14 @@
 <widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" viewmodes="minimized" version="1.8.3">
 
   <name>Documents</name>
-  <author>Christoph142</author>
+  
+  <author href="http://my.opera.com/christoph142/blog">Christoph142</author>
+  
+  <icon src="images/icon.png"/>
+  
   <description xml:lang="en">Viewer for online documents (e.g. PDF, MS Word)</description>
   <description xml:lang="de">Viewer für Online-Dokumente (z.B. PDF, MS Word)</description>
-  <icon src="images/icon.png"/>
+    
+  <preference name="wanted_docs" value="pdf|doc[x]?|xls[x]?|ppt[x]?|od(t|s)|pages|ai|psd|tiff|dxf|svg|[e]?ps|(o|t)tf|xps" />
   
 </widget>
