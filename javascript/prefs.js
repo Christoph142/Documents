@@ -15,8 +15,7 @@ function close_lang_menu(){
 }
 
 function getprefs(){
-	if(widget.preferences.lang!=undefined && widget.preferences.lang!="auto")
-		document.getElementById('current_lang').src = "images/"+widget.preferences.lang+".jpg";
+	if(widget.preferences.lang!="auto")	document.getElementById('current_lang').src = "images/"+widget.preferences.lang+".jpg";
 		
 	if(widget.preferences.pdf=="0")			document.getElementById('pdf0').checked = true;
 	else if(widget.preferences.pdf=="2")	document.getElementById('pdf2').checked = true;

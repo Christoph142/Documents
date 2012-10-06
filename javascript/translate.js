@@ -5,7 +5,7 @@ function change_lang(new_lang){
 }
 
 function _(to_translate){
-	if(!widget.preferences.lang || widget.preferences.lang == "auto") document.write( lang[autolang][to_translate] );
+	if(widget.preferences.lang == "auto") document.write( lang[autolang][to_translate] );
 	else document.write( lang[widget.preferences.lang][to_translate] );
 }
 
