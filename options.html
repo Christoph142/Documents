@@ -4,11 +4,12 @@
 <head>
 	<title>Documents</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="javascript/language.js"></script>
+    <script type="text/javascript" src="autolang.js"></script>
+    <script type="text/javascript" src="javascript/translate.js"></script>
     <script type="text/javascript" src="javascript/prefs.js"></script>
 </head>
 
-<body onLoad="adjustlanguage(); getprefs();">
+<body onLoad="getprefs();">
 
 <div id="lang_container">
     <div id="lang" class="done" onClick="lang_menu(this);">
@@ -30,13 +31,13 @@
 <header>
 	<img src="images/icon.png">
     <h1 id="widget-name">Documents</h1>
-    <h3>Made by <a href="http://my.opera.com/christoph142/blog/" target="_blank" style="background-color:transparent;">Christoph142</a></h3>
+    <h3><script>_("by");</script> <a href="http://my.opera.com/christoph142/blog/" target="_blank" style="background-color:transparent;">Christoph142</a></h3>
 </header>
 
 <section>
-    <h3>#Options#</h3>
+    <h3><script>_("Options");</script></h3>
     <fieldset>
-    <p>#choosedocs#<br></p>
+    <p><script>_("choosedocs");</script><br></p>
     <p id="multicol">
     <input type="radio" name="pdf" value="0" id="pdf0" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
     <input type="radio" name="pdf" value="1" id="pdf1" onClick="widget.preferences.pdf=this.value; set_wanted_docs();">
@@ -95,16 +96,16 @@
     <input type="radio" name="xps" value="2" id="xps2" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
     <label for="xps">XML Paper Specification (.xps)</label>
     </p>
-    <input type="radio" value="0"> = #0#<br>
-    <input type="radio" value="1"> = #1#<br>
-    <input type="radio" value="2"> = #2#
+    <input type="radio" value="0"> = <script>_("0");</script><br>
+    <input type="radio" value="1"> = <script>_("1");</script><br>
+    <input type="radio" value="2"> = <script>_("2");</script>
     </fieldset>
     <br>
-    <fieldset><p>#manual_setup_instruction#</p></fieldset>
+    <fieldset><p><script>_("manual_setup_instruction");</script></p></fieldset>
 </section>
 
 <footer>
-    <p>#footer# :)<br><br></p>
+    <p><script>_("footer");</script> :)<br><br></p>
 </footer>
   
 </body>
