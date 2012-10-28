@@ -2,6 +2,7 @@
 // @include http://*
 // @include https://*
 // @exclude https://docs.google.com/viewer?*
+// @exclude http://acid3.acidtests.org*
 // @exclude http://www.megalab.it/*
 // ==/UserScript==
 
@@ -21,8 +22,8 @@ function change_links(param){
 	try{
 	all_links = param.getElementsByTagName("a");
 	for(i=0; i < all_links.length; i++){
-		if(all_links[i].href.match(wanted_docs)&&all_links[i].href.match(/\?/)==null){
-			if(widget.preferences.lang!="auto")
+		if(all_links[i].href.match(wanted_docs) && !all_links[i].href.match(/\?/)){
+			if(widget.preferences.lang != "auto")
 				param.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&hl="+widget.preferences.lang+"&url="+param.getElementsByTagName("a")[i].href;
 			else
 				param.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&url="+param.getElementsByTagName("a")[i].href;
