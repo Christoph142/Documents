@@ -3,7 +3,11 @@
 
 <head>
 	<title>Documents</title>
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+	window.addEventListener("DOMContentLoaded", function(){
+		if(opera.contexts.menu) opera.contexts.menu.addItem(opera.contexts.menu.createItem({title:"open with Documents",contexts:['link']}));
+	}, false);
+    </script>
 </head>
 
 <body><!-- IGNORED --></body>
