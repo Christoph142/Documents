@@ -3,10 +3,21 @@
 
 <head>
 	<title>Documents</title>
+    <script type="text/javascript" src="autolang.js"></script>
     <script type="text/javascript">
-	window.addEventListener("DOMContentLoaded", function(){
-		if(opera.contexts.menu) opera.contexts.menu.addItem(opera.contexts.menu.createItem({title:"open with Documents",contexts:['link']}));
-	}, false);
+	if(opera.contexts.menu){
+		var menu = opera.contexts.menu;
+		var lang = widget.preferences.lang=="auto"?autolang:widget.preferences.lang;
+		if(lang=="de")		var localized_title = "mit Documents öffnen";
+		else if(lang=="fr")	var localized_title = "ouvre avec Documents";
+		else				var localized_title = "open with Documents";
+		var context_item = menu.createItem({title:localized_title,contexts:['link'],icon:"images/contextmenu.png"});
+	
+		opera.extension.onmessage =	function(event){
+			if(event.data == "add" && !menu.item(0)) menu.addItem(context_item);
+			else if(event.data == "remove" && menu.item(0)) menu.removeItem(0);
+		}
+	}
     </script>
 </head>
 

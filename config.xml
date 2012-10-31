@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" version="1.9">
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" version="2.0">
 
 	<name>Documents</name>
 	<author href="http://my.opera.com/christoph142/blog">Christoph D.</author>
@@ -13,5 +13,6 @@
 	<preference name="lang" value="auto" />
 	<preference name="wanted_docs" value="pdf|doc[x]?|xls[x]?|ppt[x]?|od(t|s)|pages|ai|psd|tiff|dxf|svg|[e]?ps|(o|t)tf|xps" />
 	<preference name="extended_docs" value="" />
+	<preference name="rightclick_docs" value="pdf|doc[x]?|xls[x]?|ppt[x]?|od(t|s)|pages|ai|psd|tiff|dxf|svg|[e]?ps|(o|t)tf|xps" />
 
 </widget>
