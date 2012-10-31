@@ -21,13 +21,8 @@ window.addEventListener("DOMNodeInserted", function(){ change_links(window.event
 function change_links(param){
 	try{
 	all_links = param.getElementsByTagName("a");
-	for(i=0; i < all_links.length; i++){
-		if(all_links[i].href.match(wanted_docs) && !all_links[i].href.match(/\?/)){
-			if(widget.preferences.lang != "auto")
-				param.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&hl="+widget.preferences.lang+"&url="+param.getElementsByTagName("a")[i].href;
-			else
-				param.getElementsByTagName("a")[i].href = "https://docs.google.com/viewer?docex=1&url="+param.getElementsByTagName("a")[i].href;
-		}
-	}
+	for(var i=0; i < all_links.length; i++)
+		if(all_links[i].href.match(wanted_docs) && !all_links[i].href.match(/\?/))
+			all_links[i].href = "https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url="+param.getElementsByTagName("a")[i].href;
 	}catch(e){}
 }
