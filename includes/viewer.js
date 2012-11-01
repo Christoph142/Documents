@@ -2,10 +2,6 @@
 // @include https://docs.google.com/viewer?docex=1&*
 // ==/UserScript==
 
-var savebutton_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHQSURBVFhHzZa9zcIwEIbtlAghEKxAS4dEzwLQIzEFDQMwAytQIGAAeiSaiIIGIVGwAP8V8OlOtj/HuQTHkMAjnRwb5/zyXi4Kv91uT6bBORdX6fJ8Bo5FPDH+BAExoNaMT0DlhTAJiJElglHGJ9DzyfC8cFH49XoNSYTNOubcBcoJc81KTFq8JWY8HrPlconXvV4Px1KphOPhcGC73Y4VCgXm+z6utVotlYsqiymG7CbYpIcNq9WKjUYjvAbBENPpVN1v5pTrOqQYk6ibXyEF2WIlJis83TZXB1wxz3V+ZjabDcZ6vcYol8us0+mw7XYrdgQxc1J5+eVysbZiMpmobrKlXq+zdrstZvE4iel2u2y/34vVMNVqFcfhcJhIjFOZ8vk8q1QqkZHL5TB0zJxU8PP5bO0MtCk4U6vV8L0SRbPZxHE+nytn4LBXOLV2sVhU/54KeAtDJMW5m5Ji5qTykmWiNgKz2QzL1O/3xUo8g8FAlenxeIjVf0JfB6fTyfqvg5jFYiFmdjQaDRRzv99xHvdFkEjMO0i348Rk9sxI4vKSznxaQBSmS06tnRakM9STnwahbjoejygGfsi6POZ5v1Um3ZlvlUeinMmqRNEw9gfQ8pSgoVZQeAAAAABJRU5ErkJggg==";
-
-var savebutton_hover_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIVSURBVFhHzZfLjgFBFIZPDxJxCyGxYCWxkPAEHsDKip0NKwvxAN7AG/AgljZiT4KwEIkIG4mIWwihRx1V0jHFVPWMnvmSP3XprvLrU1XdR9ntdir8E9DMarWC2WwGp9OJdhuHxWKBYDAILpcLlO12qw4GAwiFQmC32+ktxrHZbGA8HkMkEoEPVVXxifyFEYLT6cTfJz7QDIGUz/Qb8OZlYtc/sPYNj4P1SAQhM4x8Pg+BQAC1WCxQl8sFtVwuod1uw2g0gmQyiTqfz/frItzN8P4NkwidTgeKxSLWW60WKpFI3Mc/zqkVQypMspBdWiqVaOt7pML0bv6nGW0MH8VjOByi+v0+yuv1QrVaxQXMgzcvE0P3mkmlUiiySLXK5XL0DnnMtJSiXq/DdDqlra+Ew2Es4/E4lqLoCpPD4QCfz/dUNpsNpYU3LxND6MloBxCazSY0Gg3a+ko6naY1OXTtJrfbfT+JeSKfA0Sy6N5NsvDmZWIo6/Va7fV6EIvFaNdzCoUC1Go1PFlFIN8omUwGyuXyy/dTt9uFaDQqZ6ZSqcBkMqEtMYihbDaLL02CoihYatFl5iewcLwyY9iaYbyaX+oE/olE0LW134VQmN4tBpoxm82w3++xw2iueRvmTgTlmreo5Pt1Pp/D8XjETiMhRvx+P3g8nlsSdzgc0CE7C4zEZDJhzma1Wm/pLS9+RkHOnZsU+AQ8X63UgZIW7wAAAABJRU5ErkJggg==";
-
 window.addEventListener('DOMContentLoaded', function(){
 	
 	// set top to 28px to prevent the documents jumping around during page loading:
@@ -28,11 +24,14 @@ window.addEventListener('DOMContentLoaded', function(){
 	docs_menubar_shadow.style = "position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -2px 2px rgba(255,255,255,0.9),0 3px 5px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc;";
 	document.body.appendChild(docs_menubar_shadow);
 	
-	// display document title on the right side of white docs-menubar:
+	// display document's file name or its title (if available) at the right side of white docs-menubar:
 	var titlediv = document.createElement("div");
-	titlediv.setAttribute("style","float:right; height:22px; padding-top:5px; color:#666;");
-	titlediv.innerHTML = document.getElementsByClassName("docs-title-inner")[0].innerHTML;
+	titlediv.id = "docex_titlediv";
+	titlediv.setAttribute("style","float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; oTransition:0.5s;");
+	titlediv.innerHTML = document.title;
 	document.getElementById("docs-menubar").appendChild(titlediv);
+	window.setTimeout(check_title,1000); window.setTimeout(check_title,3000);
+	window.setTimeout(check_title,5000); window.setTimeout(check_title,10000);
 	
 	// adjust menu:
 	document.getElementById(":9").outerHTML = "";
@@ -94,35 +93,29 @@ window.addEventListener('DOMContentLoaded', function(){
 			document.getElementById("password-div").firstChild.action.replace("docs.google.com/viewer?url=","docs.google.com/viewer?docex=1&url=");
 	}catch(e){}
 	
+	// show / hide controlbar:
+	window.addEventListener("keydown", function(){ adjust_controlbar(); }, false);
+	window.addEventListener("mousemove", function(){ adjust_controlbar(); }, false);
 }, false);
 
-// show / hide controlbar:
 var controlbar_is_visible = 0;
-window.addEventListener("keydown", function(){ adjust_controlbar(); }, false);
-window.addEventListener("mousemove", function(){ adjust_controlbar(); }, false);
-
 function adjust_controlbar(){
-	if(!controlbar_is_visible && (mouse_pos()<29 || document.activeElement.id=="searchBox")){
+	var e = window.event;
+	var active = document.activeElement.id;
+	if(!controlbar_is_visible && (e.pageY<29 || active=="searchBox")){
 		document.getElementById("controlbar").style.display = "block";
 		document.getElementById("controlbar").style.opacity = "1";
 		controlbar_is_visible = 1;
 	}
-	else if(controlbar_is_visible && ((window.event.keyCode==27 && document.activeElement.id=="searchBox") || (document.activeElement.id!="searchBox" && mouse_pos()>100))){
+	else if(controlbar_is_visible && ((e.keyCode==27 && active=="searchBox") || (active!="searchBox" && e.pageY>100))){
 		document.getElementById("controlbar").style.opacity = "0";
 		window.setTimeout(function(){document.getElementById("controlbar").style.display = "none";}, 500);
 		controlbar_is_visible = 0;
 	}
 }
 
-function mouse_pos(){
-	e = window.event;
-	var body = (window.document.compatMode && window.document.compatMode == "CSS1Compat") ? 
-	window.document.documentElement : window.document.body;
-	return e.pageY ? e.pageY : e.clientY + body.scrollTop - body.clientTop;
-}
-
 function localize_it(savebutton){
-	if(widget.preferences.lang == "de" || ((!widget.preferences.lang || widget.preferences.lang=="auto") && window.navigator.language=="de")){
+	if(widget.preferences.lang == "de" || (widget.preferences.lang=="auto" && window.navigator.language=="de")){
 		document.getElementById("bugreport").firstChild.innerHTML = "Melde einen Fehler";
 		document.getElementById("rate_extension").firstChild.innerHTML = "Bewerte Documents";
 		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
@@ -134,7 +127,7 @@ function localize_it(savebutton){
 			savebutton.setAttribute("aria-label", "klicke hier mit der rechten Maustaste und wähle \"Verlinkten Inhalt speichern als...\" um die Datei zu speichern");
 		}
 	}
-	else if(widget.preferences.lang == "fr" || ((!widget.preferences.lang || widget.preferences.lang=="auto") && window.navigator.language=="fr")){
+	else if(widget.preferences.lang == "fr" || (widget.preferences.lang=="auto" && window.navigator.language=="fr")){
 		document.getElementById("bugreport").firstChild.innerHTML = "Rapporte une erreur";
 		document.getElementById("rate_extension").firstChild.innerHTML = "Evalue Documents";
 		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
@@ -147,3 +140,17 @@ function localize_it(savebutton){
 		}
 	}
 }
+
+function check_title(){
+	if(document.getElementById("docex_titlediv").innerHTML != document.title){
+		document.getElementById("docex_titlediv").style.opacity = "0";
+		window.setTimeout(function(){
+			document.getElementById("docex_titlediv").innerHTML = document.title;
+			document.getElementById("docex_titlediv").style.opacity = "1";
+		},500);
+	}
+}
+
+var savebutton_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHQSURBVFhHzZa9zcIwEIbtlAghEKxAS4dEzwLQIzEFDQMwAytQIGAAeiSaiIIGIVGwAP8V8OlOtj/HuQTHkMAjnRwb5/zyXi4Kv91uT6bBORdX6fJ8Bo5FPDH+BAExoNaMT0DlhTAJiJElglHGJ9DzyfC8cFH49XoNSYTNOubcBcoJc81KTFq8JWY8HrPlconXvV4Px1KphOPhcGC73Y4VCgXm+z6utVotlYsqiymG7CbYpIcNq9WKjUYjvAbBENPpVN1v5pTrOqQYk6ibXyEF2WIlJis83TZXB1wxz3V+ZjabDcZ6vcYol8us0+mw7XYrdgQxc1J5+eVysbZiMpmobrKlXq+zdrstZvE4iel2u2y/34vVMNVqFcfhcJhIjFOZ8vk8q1QqkZHL5TB0zJxU8PP5bO0MtCk4U6vV8L0SRbPZxHE+nytn4LBXOLV2sVhU/54KeAtDJMW5m5Ji5qTykmWiNgKz2QzL1O/3xUo8g8FAlenxeIjVf0JfB6fTyfqvg5jFYiFmdjQaDRRzv99xHvdFkEjMO0i348Rk9sxI4vKSznxaQBSmS06tnRakM9STnwahbjoejygGfsi6POZ5v1Um3ZlvlUeinMmqRNEw9gfQ8pSgoVZQeAAAAABJRU5ErkJggg==";
+
+var savebutton_hover_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIVSURBVFhHzZfLjgFBFIZPDxJxCyGxYCWxkPAEHsDKip0NKwvxAN7AG/AgljZiT4KwEIkIG4mIWwihRx1V0jHFVPWMnvmSP3XprvLrU1XdR9ntdir8E9DMarWC2WwGp9OJdhuHxWKBYDAILpcLlO12qw4GAwiFQmC32+ktxrHZbGA8HkMkEoEPVVXxifyFEYLT6cTfJz7QDIGUz/Qb8OZlYtc/sPYNj4P1SAQhM4x8Pg+BQAC1WCxQl8sFtVwuod1uw2g0gmQyiTqfz/frItzN8P4NkwidTgeKxSLWW60WKpFI3Mc/zqkVQypMspBdWiqVaOt7pML0bv6nGW0MH8VjOByi+v0+yuv1QrVaxQXMgzcvE0P3mkmlUiiySLXK5XL0DnnMtJSiXq/DdDqlra+Ew2Es4/E4lqLoCpPD4QCfz/dUNpsNpYU3LxND6MloBxCazSY0Gg3a+ko6naY1OXTtJrfbfT+JeSKfA0Sy6N5NsvDmZWIo6/Va7fV6EIvFaNdzCoUC1Go1PFlFIN8omUwGyuXyy/dTt9uFaDQqZ6ZSqcBkMqEtMYihbDaLL02CoihYatFl5iewcLwyY9iaYbyaX+oE/olE0LW134VQmN4tBpoxm82w3++xw2iueRvmTgTlmreo5Pt1Pp/D8XjETiMhRvx+P3g8nlsSdzgc0CE7C4zEZDJhzma1Wm/pLS9+RkHOnZsU+AQ8X63UgZIW7wAAAABJRU5ErkJggg==";
