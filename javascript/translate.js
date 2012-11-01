@@ -46,11 +46,11 @@ var lang = {
 	"fr" : {
 		"by" : "de",
 		"Options" : "Options",
-		"choosedocs" : "Quels types de documents voulez-vous obtenir ouvert par cette extension?",
-		"0old" : "not handled by Documents",
-		"0new" : "only use the context menu",
-		"1" : "basic function (links are opened with Documents; standard)",
-		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below))",
+		"choosedocs" : "Quels types de documents veux-tu obtenir ouvert par cette extension?",
+		"0old" : "pas traitées par Documents",
+		"0new" : "seulement utilise le menu contextuel",
+		"1" : "fonction de base (les liens sont ouverts avec Documents; standard)",
+		"2" : "fonction étendue (fonction de base + fonctions étendues; choisi si tu as fait la configuration supplémentaire (voir ci-dessous))",
 		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
 		"footer" : "Pour rétroaction et de l'aide, n'hésite pas à me contacter"
 	},
