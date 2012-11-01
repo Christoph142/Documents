@@ -2,6 +2,10 @@
 // @include https://docs.google.com/viewer?docex=1&*
 // ==/UserScript==
 
+var savebutton_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAHQSURBVFhHzZa9zcIwEIbtlAghEKxAS4dEzwLQIzEFDQMwAytQIGAAeiSaiIIGIVGwAP8V8OlOtj/HuQTHkMAjnRwb5/zyXi4Kv91uT6bBORdX6fJ8Bo5FPDH+BAExoNaMT0DlhTAJiJElglHGJ9DzyfC8cFH49XoNSYTNOubcBcoJc81KTFq8JWY8HrPlconXvV4Px1KphOPhcGC73Y4VCgXm+z6utVotlYsqiymG7CbYpIcNq9WKjUYjvAbBENPpVN1v5pTrOqQYk6ibXyEF2WIlJis83TZXB1wxz3V+ZjabDcZ6vcYol8us0+mw7XYrdgQxc1J5+eVysbZiMpmobrKlXq+zdrstZvE4iel2u2y/34vVMNVqFcfhcJhIjFOZ8vk8q1QqkZHL5TB0zJxU8PP5bO0MtCk4U6vV8L0SRbPZxHE+nytn4LBXOLV2sVhU/54KeAtDJMW5m5Ji5qTykmWiNgKz2QzL1O/3xUo8g8FAlenxeIjVf0JfB6fTyfqvg5jFYiFmdjQaDRRzv99xHvdFkEjMO0i348Rk9sxI4vKSznxaQBSmS06tnRakM9STnwahbjoejygGfsi6POZ5v1Um3ZlvlUeinMmqRNEw9gfQ8pSgoVZQeAAAAABJRU5ErkJggg==";
+
+var savebutton_hover_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAdCAYAAAAgqdWEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAIVSURBVFhHzZfLjgFBFIZPDxJxCyGxYCWxkPAEHsDKip0NKwvxAN7AG/AgljZiT4KwEIkIG4mIWwihRx1V0jHFVPWMnvmSP3XprvLrU1XdR9ntdir8E9DMarWC2WwGp9OJdhuHxWKBYDAILpcLlO12qw4GAwiFQmC32+ktxrHZbGA8HkMkEoEPVVXxifyFEYLT6cTfJz7QDIGUz/Qb8OZlYtc/sPYNj4P1SAQhM4x8Pg+BQAC1WCxQl8sFtVwuod1uw2g0gmQyiTqfz/frItzN8P4NkwidTgeKxSLWW60WKpFI3Mc/zqkVQypMspBdWiqVaOt7pML0bv6nGW0MH8VjOByi+v0+yuv1QrVaxQXMgzcvE0P3mkmlUiiySLXK5XL0DnnMtJSiXq/DdDqlra+Ew2Es4/E4lqLoCpPD4QCfz/dUNpsNpYU3LxND6MloBxCazSY0Gg3a+ko6naY1OXTtJrfbfT+JeSKfA0Sy6N5NsvDmZWIo6/Va7fV6EIvFaNdzCoUC1Go1PFlFIN8omUwGyuXyy/dTt9uFaDQqZ6ZSqcBkMqEtMYihbDaLL02CoihYatFl5iewcLwyY9iaYbyaX+oE/olE0LW134VQmN4tBpoxm82w3++xw2iueRvmTgTlmreo5Pt1Pp/D8XjETiMhRvx+P3g8nlsSdzgc0CE7C4zEZDJhzma1Wm/pLS9+RkHOnZsU+AQ8X63UgZIW7wAAAABJRU5ErkJggg==";
+
 window.addEventListener('DOMContentLoaded', function(){
 	
 	// set top to 28px to prevent the documents jumping around during page loading:
@@ -63,12 +67,14 @@ window.addEventListener('DOMContentLoaded', function(){
 	if(document.URL.split("&docid")[0].match(extended_docs)){ // for extended functions selected:
 		savebutton.dataset.tooltip = "rightclick here and choose \"Save Linked Content as...\" to download this file";
 		savebutton.setAttribute("aria-label", "rightclick here and choose \"Save Linked Content as...\" to download this file");
-		savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' onclick='javascript:return false;'><img src='http://www.codog.de/Documents/save.png' alt='save' height='12' style='margin-top:5px;'></a>";
+		savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' onclick='javascript:return false;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
 	}
 	else{ //for basic mode:
 		savebutton.dataset.tooltip = "Save file (Ctrl+S)";
 		savebutton.setAttribute("aria-label", "Save file (Ctrl+S)");
-		savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;'><img src='http://www.codog.de/Documents/save.png' alt='save' height='12' style='margin-top:5px;'></a>";
+		savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
+		savebutton.onmouseover = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_hover_src; };
+		savebutton.onmouseout = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_src; };
 	}
 	// change language of inserted menu items and button if necessary:
 	localize_it(savebutton);
