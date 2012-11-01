@@ -38,6 +38,6 @@ function adjust_rightclick(param){
 	}catch(e){}
 }
 
-if(opera.contexts.menu) opera.contexts.menu.onclick = function(menuEvent){
+if(window.opera.version()>=12.10) opera.contexts.menu.onclick = function(menuEvent){
 	window.location.href = (!menuEvent.linkURL.match(/\?docex/)?"https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url=":"")+menuEvent.linkURL;
 };
