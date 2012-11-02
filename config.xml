@@ -7,6 +7,7 @@
 	
 	<description xml:lang="en">Viewer for online documents (e.g. PDF, MS Word)</description>
 	<description xml:lang="de">Viewer für Online-Dokumente (z.B. PDF, MS Word)</description>
+	<description xml:lang="en">Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)</description>
 	
 	<feature name="opera:contextmenus" required="false"/>
 	

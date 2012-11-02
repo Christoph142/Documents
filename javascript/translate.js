@@ -86,5 +86,16 @@ var lang = {
 		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below))",
 		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
 		"footer" : "Для обратной связи и помощи не стесняйтесь связатся со мной"
+	},
+	"tr" : {
+		"by" : "by",
+		"Options" : "Ayarlar",
+		"choosedocs" : "Bu eklentiyle hangi belge türlerini ilişkilendirmek istiyorsunuz?",
+		"0old" : "Documents tarafından kullanılamadı",
+		"0new" : "sadece içerik menüsünü kullan",
+		"1" : "temel fonksiyon (linkler Documents tarafından açılır; standart)",
+		"2" : "gelişmiş fonksiyon (temel + gelişmiş fonksiyon; eğer ekstradan kurulum yaptıysanız (aşağıya bakınız))",
+		"manual_setup_instruction" : "Adres satırına yapıştırdığınız, taşıdığınız veya tarama geçmişinizden seçtiğiniz seçtiğiniz linkleri Documents ile açmak için: <br>1. Ayarlar -> Tercihler (k. Ctr+F12) -> Gelişmiş -> İndirmeler<br>2. \'Opera\'yla açılan dosya türünü gizle\' işaretini kaldırın.<br>Listeden desteklenen uzantıları seçin. (pdf gibi) ve düzenleye tıklayın.<br>\'Opera\'yla aç\'  ve Tamama tıklayın.<br><br>3. ve 4. adımları desteklenmesini istediğiniz her uzantı için tekrar yapın. Tercihleri kapatmak için Tamam düğmesine tıklayın. Şimdi ise Documents için düşündüğünüz tüm dosya tipleri için üçüncü seçeneği (gelişmiş fonksiyon) işaretleyin ve halloldu.",
+		"footer" : "Geribildirim ve yardım için benimle iletişime geçmekten çekinmeyin"
 	}
 };
