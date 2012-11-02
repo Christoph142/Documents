@@ -139,6 +139,18 @@ function localize_it(savebutton){
 			savebutton.setAttribute("aria-label", "fais un clic droit ici et choisis \"Enregistrer le contenu lié sous ... \" pour télécharger ce fichier");
 		}
 	}
+	else if(widget.preferences.lang == "tr" || (widget.preferences.lang=="auto" && window.navigator.language=="tr")){
+		document.getElementById("bugreport").firstChild.innerHTML = "Report an issue";
+		document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
+		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
+			savebutton.dataset.tooltip = "Save file (Ctrl+S)";
+			savebutton.setAttribute("aria-label", "Save file (Ctrl+S)");
+		}
+		else {
+			savebutton.dataset.tooltip = "rightclick here and choose \"Save Linked Content as...\" to download this file";
+			savebutton.setAttribute("aria-label", "rightclick here and choose \"Save Linked Content as...\" to download this file");
+		}
+	}
 }
 
 function check_title(){

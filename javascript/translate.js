@@ -86,5 +86,16 @@ var lang = {
 		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below))",
 		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
 		"footer" : "Для обратной связи и помощи не стесняйтесь связатся со мной"
+	},
+	"tr" : {
+		"by" : "by",
+		"Options" : "Настройка",
+		"choosedocs" : "Which kinds of documents do you want to associate with this extension?",
+		"0old" : "not handled by Documents",
+		"0new" : "only use the context menu",
+		"1" : "basic function (links are opened with Documents; standard)",
+		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below))",
+		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+		"footer" : "Для обратной связи и помощи не стесняйтесь связатся со мной"
 	}
 };
