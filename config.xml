@@ -5,8 +5,10 @@
 	<author href="http://my.opera.com/christoph142/blog">Christoph D.</author>
 	<icon src="images/icon.png"/>
 	
-	<description xml:lang="en">Viewer for online documents (e.g. PDF, MS Word)</description>
 	<description xml:lang="de">Viewer für Online-Dokumente (z.B. PDF, MS Word)</description>
+	<description xml:lang="en">Viewer for online documents (e.g. PDF, MS Word)</description>
+	<description xml:lang="fr">Viewer pour les documents onlines (p.e. PDF, MS Word)</description>
+	<description xml:lang="tr">Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)</description>
 	
 	<feature name="opera:contextmenus" required="false"/>
 	
