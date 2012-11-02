@@ -2,7 +2,7 @@
 // @include https://docs.google.com/viewer?docex=1&*
 // ==/UserScript==
 
-window.addEventListener('DOMContentLoaded', function(){
+window.opera.addEventListener("BeforeEvent.DOMContentLoaded", function(){
 	
 	// set top to 28px to prevent the documents jumping around during page loading:
 	document.getElementById("content-pane").style.top = "28px";
