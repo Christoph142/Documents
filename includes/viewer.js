@@ -96,6 +96,11 @@ window.opera.addEventListener("BeforeEvent.DOMContentLoaded", function(){
 	// show / hide controlbar:
 	window.addEventListener("keydown", function(){ adjust_controlbar(); }, false);
 	window.addEventListener("mousemove", function(){ adjust_controlbar(); }, false);
+	
+	// if available go to page nr X in link:
+	if(document.URL.match(/\#page([0-9]+)$/)) window.setTimeout(function(){
+		try{document.getElementById(":r.thumb."+(document.URL.match(/\#page([0-9]+)$/)[1]-1)).lastChild.click();}catch(e){/* !page */}
+	},1000);
 }, false);
 
 var controlbar_is_visible = 0;
