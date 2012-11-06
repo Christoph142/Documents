@@ -9,16 +9,13 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var extended_docs = new RegExp("\\.("+widget.preferences.extended_docs+")$","gim");//$ = end of string
+var extended_docs = new RegExp("\\.("+widget.preferences.extended_docs+")(\#page[0-9]+)*$","gim");//$ = end of string
 
 window.opera.addEventListener("BeforeEvent", handle_pasted_urls, false);
 function handle_pasted_urls(){
 	if(document.URL.match(extended_docs) && !document.URL.match(/\?/)){
 		window.stop();
-		if(widget.preferences.lang!=undefined && widget.preferences.lang!="auto")
-			window.location.replace("https://docs.google.com/viewer?docex=1&hl="+widget.preferences.lang+"&url="+document.URL);
-		else
-			window.location.replace("https://docs.google.com/viewer?docex=1&url="+document.URL);
+		window.location.replace("https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url="+document.URL);
 	}
 	window.opera.removeEventListener("BeforeEvent", handle_pasted_urls, false);
 }

@@ -1,6 +1,4 @@
 // ==UserScript==
-// @include http://*
-// @include https://*
 // @exclude http://www.megalab.it/*
 // @exclude https://docs.google.com/viewer?*
 // @exclude http://acid3.acidtests.org*
@@ -13,7 +11,7 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var rightclick_docs = new RegExp("\\.("+widget.preferences.rightclick_docs+")$","gim");//$ = end of string
+var rightclick_docs = new RegExp("\\.("+widget.preferences.rightclick_docs+")(\#page[0-9]+)*$","gim");//$ = end of string
 
 window.addEventListener("DOMContentLoaded", function(){ adjust_rightclick(document); }, false);
 window.addEventListener("DOMNodeInserted", function(){ adjust_rightclick(window.event.target); }, false);

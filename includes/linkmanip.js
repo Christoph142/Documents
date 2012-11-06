@@ -1,6 +1,4 @@
 // ==UserScript==
-// @include http://*
-// @include https://*
 // @exclude https://docs.google.com/viewer?*
 // @exclude http://acid3.acidtests.org*
 // @exclude http://www.megalab.it/*
@@ -13,7 +11,7 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var wanted_docs = new RegExp("\\.("+widget.preferences.wanted_docs+")$","gim");//$ = end of string
+var wanted_docs = new RegExp("\\.("+widget.preferences.wanted_docs+")(\#page[0-9]+)*$","gim");//$ = end of string
 
 window.addEventListener("DOMContentLoaded", function(){ change_links(document); }, false);
 window.addEventListener("DOMNodeInserted", function(){ change_links(window.event.target); }, false);
