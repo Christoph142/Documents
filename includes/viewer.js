@@ -145,15 +145,15 @@ function localize_it(savebutton){
 		}
 	}
 	else if(widget.preferences.lang == "tr" || (widget.preferences.lang=="auto" && window.navigator.language=="tr")){
-		document.getElementById("bugreport").firstChild.innerHTML = "Report an issue";
-		document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
-		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
-			savebutton.dataset.tooltip = "Save file (Ctrl+S)";
-			savebutton.setAttribute("aria-label", "Save file (Ctrl+S)");
+		document.getElementById("bugreport").firstChild.innerHTML = "Hata bildir";
+		document.getElementById("rate_extension").firstChild.innerHTML = "Documents\'i oyla";
+		if(savebutton.dataset.tooltip == "Dosyayı kaydet (Ctrl+S)"){
+			savebutton.dataset.tooltip = "Dosyayı kaydet (Ctrl+S)";
+			savebutton.setAttribute("aria-label", "Dosyayı kaydet (Ctrl+S)");
 		}
 		else {
-			savebutton.dataset.tooltip = "rightclick here and choose \"Save Linked Content as...\" to download this file";
-			savebutton.setAttribute("aria-label", "rightclick here and choose \"Save Linked Content as...\" to download this file");
+			savebutton.dataset.tooltip = "dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin";
+			savebutton.setAttribute("aria-label", "dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin");
 		}
 	}
 }
