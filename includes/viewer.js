@@ -147,7 +147,7 @@ function localize_it(savebutton){
 	else if(widget.preferences.lang == "tr" || (widget.preferences.lang=="auto" && window.navigator.language=="tr")){
 		document.getElementById("bugreport").firstChild.innerHTML = "Hata bildir";
 		document.getElementById("rate_extension").firstChild.innerHTML = "Documents\'i oyla";
-		if(savebutton.dataset.tooltip == "Dosyayı kaydet (Ctrl+S)"){
+		if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
 			savebutton.dataset.tooltip = "Dosyayı kaydet (Ctrl+S)";
 			savebutton.setAttribute("aria-label", "Dosyayı kaydet (Ctrl+S)");
 		}
