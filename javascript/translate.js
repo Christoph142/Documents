@@ -66,14 +66,14 @@ var lang = {
 	    "footer" : "For å gi tilbakemeldinger og be om hjelp, ikke nøl med å kontakte meg<br>takk til<a href='https://twitter.com/Aeyoun' target='_blank' style='background-color:transparent;'>Daniel</a>for oversettelsen!"
 	},
 	"pl" : {
-		"by" : "by",
+		"by" : "autorstwa",
 		"Options" : "Ustawienia",
 		"choosedocs" : "Dokumentami w których formatach ma się zająć rozszerzenie?",
-		"0old" : "not handled by Documents",
-		"0new" : "only use the context menu",
-		"1" : "basic function (links are opened with Documents; standard)",
-		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below))",
-		"manual_setup_instruction" : "Aby otwierać łącza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co następuje:<br>1. otwórz Ustawienia → Preferencje (Ctrl+F12) → Zaawansowane → Pobieranie<br>2. odznacz „Ukryj typy plików obsługiwane przez Operę”<br>3. wybierz któreś z rozszerzeń obsługiwanych przez rozszerzenie, np. pdf i kliknij „Edytuj…”<br>4. zaznacz „Otwórz w Operze” i zatwierdź<br><br>Kroki 3 i 4 powtórz dla każdego typu pliku, który ma być obsługiwany w wyżej wymienionych sytuacjach. Na koniec klikając OK zamknij okno preferencji. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+		"0old" : "Documents nie zajmuje się tym formatem",
+		"0new" : "jedynie menu podręczne",
+		"1" : "prosta obsługa (Documents otwiera dokumenty wywołane kliknięciem łącza; domyślnie)",
+		"2" : "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz niżej))",
+		"manual_setup_instruction" : "Aby otwierać łącza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co następuje:<br>1. otwórz Ustawienia → Preferencje (Ctrl+F12) → Zaawansowane → Pobieranie<br>2. odznacz „Ukryj typy plików obsługiwane przez Operę”<br>3. wybierz któreś z rozszerzeń obsługiwanych przez rozszerzenie, np. pdf i kliknij „Edytuj…”<br>4. zaznacz „Otwórz w Operze” i zatwierdź<br><br>Kroki 3 i 4 powtórz dla każdego typu pliku, który ma być obsługiwany w wyżej wymienionych sytuacjach. Po tym klikając OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzecią z opcji (zaawansowana obsuga) wobec właśnie ustawionych formatów . To wszystko :)",
 		"footer" : "Nie wahaj się kontaktować ze mną, jeśli chcesz wyrazić swoją opinię lub pomóc<br>Dzięki <a href='http://my.opera.com/chocimir' target='_blank' style='background-color:transparent;'>Chocimier</a> za tłumaczenia!"
 	},
 	"ru" : {
