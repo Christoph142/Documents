@@ -11,16 +11,19 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var wanted_docs = new RegExp("\\.("+widget.preferences.wanted_docs+")(\#page[0-9]+)*$","gim");//$ = end of string
+var wanted_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.wanted_docs+"))","i"); // (no"?").(no"?")/(no"?").ENDING*
 
-window.addEventListener("DOMContentLoaded", function(){ change_links(document); }, false);
-window.addEventListener("DOMNodeInserted", function(){ change_links(window.event.target); }, false);
+if(widget.preferences.wanted_docs != "")
+{
+	window.addEventListener("DOMContentLoaded", function(){ change_links(document); }, false);
+	window.addEventListener("DOMNodeInserted", function(){ change_links(window.event.target); }, false);
+}
 
-function change_links(param){
+function change_links(param)
+{
 	try{
 	all_links = param.getElementsByTagName("a");
 	for(var i=0; i < all_links.length; i++)
-		if(all_links[i].href.match(wanted_docs) && !all_links[i].href.match(/\?/))
-			all_links[i].href = "https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url="+param.getElementsByTagName("a")[i].href;
+		if(all_links[i].href.match(wanted_docs)) all_links[i].href = "https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url="+param.getElementsByTagName("a")[i].href;
 	}catch(e){}
 }

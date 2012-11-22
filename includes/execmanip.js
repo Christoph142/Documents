@@ -9,11 +9,11 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var extended_docs = new RegExp("\\.("+widget.preferences.extended_docs+")(\#page[0-9]+)*$","gim");//$ = end of string
+var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+"))","i");//(no"?").(no"?")/(no"?").ENDING*
 
-window.opera.addEventListener("BeforeEvent", handle_pasted_urls, false);
+if(widget.preferences.extended_docs != ""){ window.opera.addEventListener("BeforeEvent", handle_pasted_urls, false); }
 function handle_pasted_urls(){
-	if(document.URL.match(extended_docs) && !document.URL.match(/\?/)){
+	if(document.URL.match(extended_docs)){
 		window.stop();
 		window.location.replace("https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url="+document.URL);
 	}
