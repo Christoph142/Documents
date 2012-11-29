@@ -11,7 +11,7 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var wanted_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.wanted_docs+")((?:\\?|\\#)[^\\/]*)?)$","i"); // (no"?").(no"?")/(no"?").ENDING(optionally ?/#JUNK)*
+var wanted_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.wanted_docs+")((?:\\?|\\#).*)*)$","i"); // (no"?").(no"?")/(no"?").ENDING(optionally ?/#JUNK)*
 
 if(widget.preferences.wanted_docs != "")
 {

@@ -9,10 +9,11 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+")((?:\\?|\\#)[^\\/]*)?)$","i");
+var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.wanted_docs+")((?:\\?|\\#).*)*)$","i");
 
 if(widget.preferences.extended_docs != ""){ window.opera.addEventListener("BeforeEvent", handle_pasted_urls, false); }
 function handle_pasted_urls(){
+	//alert(document.contentType);
 	if(document.URL.match(extended_docs)){
 		window.stop();
 		window.location.replace("https://docs.google.com/viewer?docex=1"+(widget.preferences.lang!="auto"?"&hl="+widget.preferences.lang:"")+"&url="+document.URL);

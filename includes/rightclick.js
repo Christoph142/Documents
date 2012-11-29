@@ -11,7 +11,7 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var rightclick_docs = new RegExp("\\.("+widget.preferences.rightclick_docs+")(\#page[0-9]+)*$","gim");//$ = end of string
+var rightclick_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.rightclick_docs+")((?:\\?|\\#).*)*)$","i");
 
 window.addEventListener("DOMContentLoaded", function(){ adjust_rightclick(document); }, false);
 window.addEventListener("DOMNodeInserted", function(){ adjust_rightclick(window.event.target); }, false);
