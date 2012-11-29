@@ -11,7 +11,7 @@
     <description xml:lang="pl">Przeglądarka dokumentów (np. PDF, MS Word) prosto z Sieci</description>
 	<description xml:lang="tr">Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)</description>
 	
-	<feature name="opera:contextmenus" required="false"/>
+	<feature name="opera:contextmenus" required="false" />
 	
 	<preference name="lang" value="auto" />
 	<preference name="wanted_docs" value="pdf|doc[x]?|xls[x]?|ppt[x]?|od(t|s)|pages|ai|psd|tiff|dxf|svg|[e]?ps|(o|t)tf|xps" />
