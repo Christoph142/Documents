@@ -9,7 +9,7 @@
 //                                                                                               //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.wanted_docs+")((?:\\?|\\#).*)*)$","i");
+var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+")((?:\\?|\\#).*)*)$","i");
 
 if(widget.preferences.extended_docs != ""){ window.opera.addEventListener("BeforeEvent", handle_pasted_urls, false); }
 function handle_pasted_urls(){
