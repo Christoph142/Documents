@@ -2,6 +2,7 @@
 // @exclude https://docs.google.com/viewer?*
 // @exclude http://acid3.acidtests.org*
 // @exclude http://www.megalab.it/*
+// @exclude http://www.17track.net/*
 // ==/UserScript==
 
 //////////////////////////////////// Documents by Christoph142 ////////////////////////////////////
