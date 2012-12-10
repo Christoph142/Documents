@@ -1,5 +1,6 @@
 // ==UserScript==
 // @exclude http://acid3.acidtests.org*
+// @exclude http://www.17track.net/*
 // ==/UserScript==
 
 //////////////////////////////////// Documents by Christoph142 ////////////////////////////////////
@@ -11,7 +12,7 @@
 
 var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+")((?:\\?|\\#).*)*)$","i");
 
-if(widget.preferences.extended_docs != "" && window.top == window.self)
+if(widget.preferences.extended_docs != "")
 	window.opera.addEventListener("BeforeEventListener", handle_pasted_urls, false);
 function handle_pasted_urls(){
 	if(document.URL.match(extended_docs)){
