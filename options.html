@@ -3,6 +3,7 @@
 <html>
 <head>
 	<title>Documents</title>
+    <link rel="icon" type="image/png" href="images/contextmenu.png">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="autolang.js"></script>
     <script type="text/javascript" src="javascript/translate.js"></script>
@@ -12,8 +13,8 @@
 <body onLoad="getprefs();">
 
 <div id="lang_container">
-    <div id="lang" class="done" onClick="lang_menu(this);">
-        <img id="current_lang" src="images/auto.jpg" title="change to another language">
+    <div id="lang" class="done">
+        <img id="current_lang" src="images/auto.jpg" title="change to another language" onClick="lang_menu(this.parentNode);">
         <br>
         <img src="images/curly_braces.png" style="box-shadow:none; -o-transform:none; cursor:default;">
         <br>
@@ -96,9 +97,19 @@
     <input type="radio" name="xps" value="2" id="xps2" onClick="widget.preferences.xps=this.value; set_wanted_docs();">
     <label for="xps">XML Paper Specification (.xps)</label>
     </p>
-    <input type="radio" value="0" checked> = <script>if(window.opera.version()<12.10) _("0old"); else _("0new");</script><br>
-    <input type="radio" value="1" checked> = <script>_("1");</script><br>
-    <input type="radio" value="2" checked> = <script>_("2");</script>
+    <table><tr>
+    	<td style="vertical-align:top;"><input type="radio" value="0" checked></td>
+        <td style="vertical-align:top;"> = </td>
+        <td style="vertical-align:top;"><script>if(window.opera.version() < 12.10) _("0old"); else _("0new");</script></td>
+    </tr><tr>
+    	<td style="vertical-align:top;"><input type="radio" value="1" checked></td>
+        <td style="vertical-align:top;"> = </td>
+        <td style="vertical-align:top;"><script>_("1");</script></td>
+    </tr><tr>
+    	<td style="vertical-align:top;"><input type="radio" value="2" checked></td>
+        <td style="vertical-align:top;"> = </td>
+        <td style="vertical-align:top;"><script>_("2");</script></td>
+    </tr></table>    
     </fieldset>
     <br>
     <fieldset><p><script>_("manual_setup_instruction");</script></p></fieldset>
