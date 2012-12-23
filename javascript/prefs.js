@@ -1,14 +1,14 @@
 function lang_menu(element){
-	if(element.className === "done"){
+	if(element.className !== "choose"){
 		element.className = "choose";
 		window.addEventListener("keydown", close_lang_menu, false);
 		window.addEventListener("click", close_lang_menu, false);
 	}
-	else element.className="done";
+	else element.className = null;
 }
 function close_lang_menu(){
 	if(window.event.keyCode === 27 || window.event.type === "click"){
-		document.getElementById("lang").className = "done";
+		document.getElementById("lang").className = null;
 		window.removeEventListener("keydown", close_lang_menu, false);
 		window.removeEventListener("click", close_lang_menu, false);
 	}	
@@ -16,95 +16,22 @@ function close_lang_menu(){
 
 function getprefs(){
 	if(widget.preferences.lang !== "auto")	document.getElementById("current_lang").src = "images/"+widget.preferences.lang+".jpg";
-		
-	if		(widget.preferences.pdf==="0")	document.getElementById("pdf0").checked = true;
-	else if (widget.preferences.pdf==="2")	document.getElementById("pdf2").checked = true;
-	else									document.getElementById("pdf1").checked = true;
-	if		(widget.preferences.doc==="0")	document.getElementById("doc0").checked = true;
-	else if	(widget.preferences.doc==="2")	document.getElementById("doc2").checked = true;
-	else									document.getElementById("doc1").checked = true;
-	if		(widget.preferences.xls==="0")	document.getElementById("xls0").checked = true;
-	else if	(widget.preferences.xls==="2")	document.getElementById("xls2").checked = true;
-	else									document.getElementById("xls1").checked = true;
-	if		(widget.preferences.ppt==="0")	document.getElementById("ppt0").checked = true;
-	else if	(widget.preferences.ppt==="2")	document.getElementById("ppt2").checked = true;
-	else									document.getElementById("ppt1").checked = true;
-	if		(widget.preferences.odt==="0")	document.getElementById("odt0").checked = true;
-	else if	(widget.preferences.odt==="2")	document.getElementById("odt2").checked = true;
-	else									document.getElementById("odt1").checked = true;
-	if		(widget.preferences.pages==="0")document.getElementById("pages0").checked = true;
-	else if	(widget.preferences.pages==="2")document.getElementById("pages2").checked = true;
-	else									document.getElementById("pages1").checked = true;
-	if		(widget.preferences.ai==="0")	document.getElementById("ai0").checked = true;
-	else if	(widget.preferences.ai==="2")	document.getElementById("ai2").checked = true;
-	else									document.getElementById("ai1").checked = true;
-	if		(widget.preferences.psd==="0")	document.getElementById("psd0").checked = true;
-	else if	(widget.preferences.psd==="2")	document.getElementById("psd2").checked = true;
-	else									document.getElementById("psd1").checked = true;
-	if		(widget.preferences.tiff==="0")	document.getElementById("tiff0").checked = true;
-	else if	(widget.preferences.tiff==="2")	document.getElementById("tiff2").checked = true;
-	else									document.getElementById("tiff1").checked = true;
-	if		(widget.preferences.dxf==="0")	document.getElementById("dxf0").checked = true;
-	else if	(widget.preferences.dxf==="2")	document.getElementById("dxf2").checked = true;
-	else									document.getElementById("dxf1").checked = true;
-	if		(widget.preferences.svg==="0")	document.getElementById("svg0").checked = true;
-	else if	(widget.preferences.svg==="2")	document.getElementById("svg2").checked = true;
-	else									document.getElementById("svg1").checked = true;
-	if		(widget.preferences.eps==="0")	document.getElementById("eps0").checked = true;
-	else if	(widget.preferences.eps==="2")	document.getElementById("eps2").checked = true;
-	else									document.getElementById("eps1").checked = true;
-	if		(widget.preferences.ttf==="0")	document.getElementById("ttf0").checked = true;
-	else if	(widget.preferences.ttf==="2")	document.getElementById("ttf2").checked = true;
-	else									document.getElementById("ttf1").checked = true;
-	if		(widget.preferences.xps==="0")	document.getElementById("xps0").checked = true;
-	else if	(widget.preferences.xps==="2")	document.getElementById("xps2").checked = true;
-	else									document.getElementById("xps1").checked = true;
+	
+	var doctypes = document.getElementsByTagName("input");
+	for(var i = 0; i+3 < doctypes.length; i++){ // last 3 inputs are in explanation section
+		if(widget.preferences[doctypes[i].name] === doctypes[i].value) doctypes[i].checked = true;
+	}
 }
 function set_wanted_docs(){
+	var possible_docs = {"pdf":"pdf","doc":"doc[x]?","xls":"xls[x]?","ppt":"ppt[x]?","odt":"od(t|s)","pages":"pages","ai":"ai","psd":"psd","tiff":"tiff","dxf":"dxf","svg":"svg","eps":"[e]?ps","ttf":"(o|t)tf","xps":"xps"};
 	var wanted_docs = "";
 	var extended_docs = "";
 	
-	if(widget.preferences.pdf==="2") 		extended_docs = "pdf";
-	else if(widget.preferences.pdf!=="0") 	wanted_docs = "pdf";
-	insert_separator("doc");
-	if(widget.preferences.doc==="2") 		extended_docs += "doc[x]?"; // [x]? = 0 or 1 time x
-	else if(widget.preferences.doc!=="0") 	wanted_docs += "doc[x]?";
-	insert_separator("xls");
-	if(widget.preferences.xls==="2") 		extended_docs += "xls[x]?";
-	else if(widget.preferences.xls!=="0") 	wanted_docs += "xls[x]?";
-	insert_separator("ppt");
-	if(widget.preferences.ppt==="2") 		extended_docs += "ppt[x]?";
-	else if(widget.preferences.ppt!=="0") 	wanted_docs += "ppt[x]?";
-	insert_separator("odt");
-	if(widget.preferences.odt==="2") 		extended_docs += "od(t|s)";
-	else if(widget.preferences.odt!=="0") 	wanted_docs += "od(t|s)";
-	insert_separator("pages");
-	if(widget.preferences.pages==="2") 		extended_docs += "pages";
-	else if(widget.preferences.pages!=="0") wanted_docs += "pages";
-	insert_separator("ai");
-	if(widget.preferences.ai==="2") 		extended_docs += "ai";
-	else if(widget.preferences.ai!=="0") 	wanted_docs += "ai";
-	insert_separator("psd");
-	if(widget.preferences.psd==="2") 		extended_docs += "psd";
-	else if(widget.preferences.psd!=="0") 	wanted_docs += "psd";
-	insert_separator("tiff");
-	if(widget.preferences.tiff==="2") 		extended_docs += "tiff";
-	else if(widget.preferences.tiff!=="0") 	wanted_docs += "tiff";
-	insert_separator("dxf");
-	if(widget.preferences.dxf==="2") 		extended_docs += "dxf";
-	else if(widget.preferences.dxf!=="0") 	wanted_docs += "dxf";
-	insert_separator("svg");
-	if(widget.preferences.svg==="2") 		extended_docs += "svg";
-	else if(widget.preferences.svg!=="0") 	wanted_docs += "svg";
-	insert_separator("eps");
-	if(widget.preferences.eps==="2") 		extended_docs += "[e]?ps";
-	else if(widget.preferences.eps!=="0") 	wanted_docs += "[e]?ps";
-	insert_separator("ttf");
-	if(widget.preferences.ttf==="2") 		extended_docs += "(o|t)tf";
-	else if(widget.preferences.ttf!=="0") 	wanted_docs += "(o|t)tf";
-	insert_separator("xps");
-	if(widget.preferences.xps==="2") 		extended_docs += "xps";
-	else if(widget.preferences.xps!=="0") 	wanted_docs += "xps";
+	for(doctype in possible_docs){
+		insert_separator(doctype);
+		if		(widget.preferences[doctype] === "2") extended_docs += possible_docs[doctype];
+		else if	(widget.preferences[doctype] !== "0") wanted_docs 	+= possible_docs[doctype];
+	}
 	
 	widget.preferences.wanted_docs = wanted_docs;
 	widget.preferences.extended_docs = extended_docs;
