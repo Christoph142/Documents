@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" defaultlocale="en" version="2.0.5">
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" defaultlocale="en" version="2.1">
 
 	<name>Documents</name>
 	<author href="http://my.opera.com/christoph142/blog">Christoph D.</author>
 	<icon src="images/icon.png"/>
 	
+	<description xml:lang="ar">مستعرض للملفات على الإنترنت (مثال: وورد، بي دي أف... الخ) دون الحاجة لبرامج اضافية</description>
 	<description xml:lang="de">Viewer für Online-Dokumente (z.B. PDF, MS Word)</description>
 	<description xml:lang="en">Viewer for online documents (e.g. PDF, MS Word)</description>
     <description xml:lang="fr">Viewer pour les documents onlines (p.e. PDF, MS Word)</description>
