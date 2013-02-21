@@ -1,9 +1,7 @@
 // ==UserScript==
 // @exclude https://docs.google.com/viewer?*
 // @exclude http://acid3.acidtests.org*
-// @exclude http://www.megalab.it/*
 // @exclude http://www.17track.net/*
-// @exclude http://shinydemos.com/*
 // ==/UserScript==
 
 //////////////////////////////////// Documents by Christoph142 ////////////////////////////////////
@@ -15,27 +13,24 @@
 
 var rightclick_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.rightclick_docs+")((?:\\?|\\#).*)*)$","i");
 
-window.addEventListener("DOMContentLoaded", function(){ adjust_rightclick(document); }, false);
-window.addEventListener("DOMNodeInserted", function(){ adjust_rightclick(window.event.target); }, false);
+window.addEventListener("animationend", adjust_rightclick, false);
 //window.oncontextmenu = function(event){ alert(event.currentTarget); alert(event.target); alert(event.relatedTarget); };
-function adjust_rightclick(param){
-	try{
-	all_links = param.getElementsByTagName("a");
-	for(var i=0; i < all_links.length; i++){
-		if(all_links[i].href.match(rightclick_docs) && (!all_links[i].href.match(/\?/) || all_links[i].href.match(/\?docex/))){
-			all_links[i].onmousedown = function(event){
-				if(event.which != 3) return; // only right-clicks
-				opera.extension.postMessage("add");
-			};
-		}
-		else{
-			all_links[i].onmousedown = function(event){
-				if(event.which != 3) return; // only right-clicks
-				opera.extension.postMessage("remove");
-			};
-		}
-	}
-	}catch(e){}
+
+function adjust_rightclick()
+{
+	if(window.event.animationName !== "documents_linkInserted") return;
+	var l = window.event.target;
+	
+	if((l.href.match(rightclick_docs) && !l.href.match(/\?/)) || l.href.match(/\?docex/))
+		l.addEventListener("mousedown", function(event){
+			if(event.which !== 3) return; // only right-clicks
+			opera.extension.postMessage("add");
+		}, false);
+	else
+		l.addEventListener("mousedown", function(event){
+			if(event.which !== 3) return; // only right-clicks
+			opera.extension.postMessage("remove");
+		}, false);
 }
 
 if(window.opera.version()>=12.10) opera.contexts.menu.onclick = function(menuEvent){
