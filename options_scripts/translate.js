@@ -11,15 +11,15 @@ function _(to_translate){
 
 var lang = {
 	"ar" : {
-		"by" : "by",
+		"by" : "من طرف",
 		"Options" : "خيارات",
-		"choosedocs" : "Which kinds of documents do you want to associate with this extension?",
-		"0old" : "not handled by Documents",
-		"0new" : "only use the context menu",
-		"1" : "basic function (links are opened with Documents; standard)",
-		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
-		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
-		"footer" : "للرد على الأستفسارات و المساعدة لا تتردد في الأتصال الي<br>Thanks to <a href='http://my.opera.com/mha2999' target='_blank' style='background-color:transparent;'>Muneer Hassan Abdulla</a> for translating!"
+		"choosedocs" : "ما نوع الملفات التي تريد استعراضها باستعمال هذه الإضافة",
+		"0old" : "الملفات المدعومة بهذه الإضافة",
+		"0new" : "إستعمال قائمة السياق فقط",
+		"1" : "  الوظيفة الأساسية (الروابط تفتح باستعمال هذه الأضافة، قياسي) ",
+		"2" : "الوظيفة الموسعة (الأساسية + وظائف إضافية. لتفعيل هذا الخيار يجب تطبيق الخطوات المذكورة أسفله; حذاري: أوبرا لن تستطيع بعد الآن فتح الملفات  (المحلية)  الموجودة في الحاسب) ",
+		"manual_setup_instruction" : "لجعل الروابط -التي قمت بجرها، أو لصقها في شريط العناوين، أو قمت بتحديدها من قائمة المحفوظات-قم بالتالي: إعدادات ← تفضيلات (CTRL F12) خيارات متقدمة ← عمليات التحميل. قم بإزالة تحديد \"إخفاء أنواع الملفات المفتوحة بواسطة أوبرا\". الآن اختر أي ملف مدعوم من هذه الإضافة مثال pdf, doc و انقر على \"تحرير\" و قم بتحديد 'افتح بواسطة أوبرا' و انقر على 'موافق'. قم بإعادة الخطوات 3 و4 مع كل الملفات المدعومة والتي تريد للوظائف الموسعة أن تعمل معها. ثم انقر على 'موافق' لغلق نافذة الإعدادات. الآن حدد الاختيار الثالث (الوظيفة الموسعة) لكل أنواع الملفات التي قمت بتحريرها في إعدادات أوبرا",
+		"footer" : "للرد على الأستفسارات و المساعدة لا تتردد في الأتصال بي<br>Thanks to <a href='http://my.opera.com/netmain' target='_blank' style='background-color:transparent;'>Netmain</a> for translating!"
 	},
 	"de" : {
 		"by" : "von",
