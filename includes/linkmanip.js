@@ -1,7 +1,6 @@
 // ==UserScript==
 // @exclude https://docs.google.com/viewer?*
 // @exclude http://acid3.acidtests.org*
-// @exclude http://www.17track.net/*
 // ==/UserScript==
 
 (function()

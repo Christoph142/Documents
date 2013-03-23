@@ -1,7 +1,5 @@
 // ==UserScript==
 // @exclude http://acid3.acidtests.org*
-// @exclude http://www.17track.net/*
-// @exclude http://shinydemos.com/*
 // ==/UserScript==
 
 (function()
