@@ -14,8 +14,10 @@ function close_lang_menu(){
 	}	
 }
 
-function getprefs(){
-	if(widget.preferences.lang !== "auto")	document.getElementById("current_lang").src = "images/"+widget.preferences.lang+".jpg";
+window.addEventListener("load", getprefs, false);
+function getprefs()
+{
+	if(widget.preferences.lang !== "auto") document.getElementById("current_lang").src = "images/"+widget.preferences.lang+".jpg";
 	
 	var doctypes = document.getElementsByTagName("input");
 	for(var i = 0; i+3 < doctypes.length; i++){ // last 3 inputs are in explanation section
