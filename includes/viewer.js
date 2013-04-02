@@ -4,9 +4,10 @@
 
 (function()
 {
-	window.opera.addEventListener("BeforeEvent", adjustCSS ,false);
-	function adjustCSS(){
-		if(document.styleSheets){
+	(function adjustCSS()
+	{
+		if(document.styleSheets.length > 0)
+		{
 			var last = document.styleSheets.length-1;
 			var position_of_last_rule = document.styleSheets[document.styleSheets.length-1].cssRules.length;
 			
@@ -16,12 +17,11 @@
 			document.styleSheets[last].insertRule("#docex_titlediv{ float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; -o-transition:0.5s;", position_of_last_rule);
 			document.styleSheets[last].insertRule("#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -2px 0 #FFF, 0 3px 5px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc; }", position_of_last_rule);
 			document.styleSheets[last].insertRule("#bugreport:hover, #rate_extension:hover{ background:#eee; }", position_of_last_rule);
-			
-			window.opera.removeEventListener("BeforeEvent", adjustCSS ,false);
 		}
-	}
+		else window.setTimeout(adjustCSS, 50);
+	})();
 	
-	window.opera.addEventListener("BeforeEvent.DOMContentLoaded", function()
+	window.addEventListener("DOMContentLoaded", function()
 	{
 		document.getElementById("content-pane").style.height = document.body.offsetHeight-28+"px";
 		document.getElementById("thumb-pane").style.height = document.body.offsetHeight-28+"px";
@@ -49,30 +49,36 @@
 		window.setTimeout(check_title,5000); window.setTimeout(check_title,10000);
 		
 		// adjust menu:
-		document.getElementById(":9").outerHTML = "";
-		document.getElementById(":b").outerHTML = "";
-		document.getElementById(":h").outerHTML = "";
-		document.getElementById(":i").outerHTML = "";
-		document.getElementById(":m").id = "bugreport";
-		document.getElementById("bugreport").firstChild.innerHTML = "Report an error";
-		document.getElementById("bugreport").onclick = function(){
-			window.open("https://addons.opera.com/extensions/details/documents/?reports#feedback-container"); };
-		document.getElementById(":n").id = "rate_extension";
-		document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
-		document.getElementById("rate_extension").onclick = function(){
-			window.open("https://addons.opera.com/extensions/details/documents/#feedback-container"); };
+		try{
+			document.getElementById(":a").outerHTML = ""; // separator
+			document.getElementById(":b").outerHTML = ""; // edit online
+			document.getElementById(":c").outerHTML = ""; // download original file
+			document.getElementById(":d").outerHTML = ""; // "print" (PDF)
+			document.getElementById(":j").outerHTML = ""; // separator
+			document.getElementById(":k").outerHTML = ""; // compact control elements
+			document.getElementById(":o").id = "bugreport";
+			document.getElementById("bugreport").firstChild.innerHTML = "Report an error";
+			document.getElementById("bugreport").onclick = function(){
+				window.open("https://addons.opera.com/extensions/details/documents/?reports#feedback-container"); };
+			document.getElementById(":p").id = "rate_extension";
+			document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
+			document.getElementById("rate_extension").onclick = function(){
+				window.open("https://addons.opera.com/extensions/details/documents/#feedback-container"); };
+		}catch(e){ /* menu altered */ }
 		
 		// grey control bar: insert a button to save the documents:
-		var printbutton = document.getElementById("printToolbarButton");
+		var printbutton	= document.getElementById("printToolbarButton");
 		var savebutton = printbutton.cloneNode(true);
 		savebutton.id = "saveToolbarButton";
 		var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+")((?:\\?|\\#).*)*)$","i");
-		if(document.URL.split("&docid")[0].match(extended_docs)){ // for extended functions selected:
+		if(document.URL.split("&url=")[1].split("&docid")[0].match(extended_docs)) // for extended functions selected:
+		{
 			savebutton.dataset.tooltip = "Rightclick here and choose \"Save Linked Content as...\" to download this file";
 			savebutton.setAttribute("aria-label", "Rightclick here and choose \"Save Linked Content as...\" to download this file");
 			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' onclick='javascript:return false;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
 		}
-		else{ //for basic mode:
+		else //for basic mode:
+		{
 			savebutton.dataset.tooltip = "Save file (Ctrl+S)";
 			savebutton.setAttribute("aria-label", "Save file (Ctrl+S)");
 			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
@@ -87,7 +93,7 @@
 		printbutton.parentNode.insertBefore(savebutton, printbutton);
 		printbutton.parentNode.insertBefore(spacer, printbutton);
 		// don't show print(PDF)-button if viewed file is a pdf or extended functions is active for PDFs:
-		if(document.getElementsByClassName("docs-title-inner")[0].innerHTML.match(new RegExp("\.pdf","i")) || widget.preferences.pdf == "3"){
+		if(document.getElementsByClassName("docs-title-inner")[0].innerHTML.match(new RegExp("\.pdf","i")) || widget.preferences.pdf === "3"){
 			document.getElementById("printToolbarButton").outerHTML = "";
 			document.getElementById("separator2").outerHTML = "";
 		}
@@ -111,14 +117,14 @@
 	function adjust_controlbar(){
 		var e = window.event;
 		var active = document.activeElement.id;
-		if(!controlbar_is_visible && (e.pageY<29 || active=="searchBox")){
+		if(!controlbar_is_visible && (e.pageY < 29 || active === "searchBox")){
 			window.clearTimeout(controlbar_timeout);
 			document.getElementById("controlbar").style.display = "block";
 			document.getElementById("controlbar").style.opacity = "1";
 			document.getElementById("menubar-shadow").style.display = "none";
 			controlbar_is_visible = 1;
 		}
-		else if(controlbar_is_visible && ((e.keyCode==27 && active=="searchBox") || (active!="searchBox" && e.pageY>100))){
+		else if(controlbar_is_visible && ((e.keyCode === 27 && active === "searchBox") || (active !== "searchBox" && e.pageY > 100))){
 			document.getElementById("controlbar").style.opacity = "0";
 			controlbar_timeout = window.setTimeout(function(){document.getElementById("controlbar").style.display = null;}, 500);
 			document.getElementById("menubar-shadow").style.display = null;
@@ -153,24 +159,26 @@
 				"Save file rightclick" : "Dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin"
 			}
 		};
-		var lang = widget.preferences.lang=="auto" ? window.navigator.language : widget.preferences.lang;
+		var lang = widget.preferences.lang === "auto" ? window.navigator.language : widget.preferences.lang;
 		
-		if(strings[lang]){
-			document.getElementById("bugreport").firstChild.innerHTML = strings[lang]["bugreport"];
-			document.getElementById("rate_extension").firstChild.innerHTML = strings[lang]["rate_extension"];
-			if(savebutton.dataset.tooltip == "Save file (Ctrl+S)"){
-				savebutton.dataset.tooltip = strings[lang]["Save file"];
-				savebutton.setAttribute("aria-label", strings[lang]["Save file"]);
+		try{
+			if(strings[lang]){
+				document.getElementById("bugreport").firstChild.innerHTML = strings[lang]["bugreport"];
+				document.getElementById("rate_extension").firstChild.innerHTML = strings[lang]["rate_extension"];
+				if(savebutton.dataset.tooltip === "Save file (Ctrl+S)"){
+					savebutton.dataset.tooltip = strings[lang]["Save file"];
+					savebutton.setAttribute("aria-label", strings[lang]["Save file"]);
+				}
+				else {
+					savebutton.dataset.tooltip = strings[lang]["Save file rightclick"];
+					savebutton.setAttribute("aria-label", strings[lang]["Save file rightclick"]);
+				}
 			}
-			else {
-				savebutton.dataset.tooltip = strings[lang]["Save file rightclick"];
-				savebutton.setAttribute("aria-label", strings[lang]["Save file rightclick"]);
-			}
-		}
+		}catch(e){ /* menu altered */ }
 	}
 	
 	function check_title(){
-		if(document.getElementById("docex_titlediv").innerHTML != document.title){
+		if(document.getElementById("docex_titlediv").innerHTML !== document.title){
 			document.getElementById("docex_titlediv").style.opacity = "0";
 			window.setTimeout(function(){
 				document.getElementById("docex_titlediv").innerHTML = document.title;
