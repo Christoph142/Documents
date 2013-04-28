@@ -4,8 +4,11 @@
 
 (function()
 {
-	(function adjustCSS()
+	window.opera.addEventListener("BeforeEvent", adjustCSS ,false);
+	function adjustCSS()
 	{
+		window.opera.removeEventListener("BeforeEvent", adjustCSS ,false);
+		
 		if(document.styleSheets.length > 0)
 		{
 			var last = document.styleSheets.length-1;
@@ -19,7 +22,7 @@
 			document.styleSheets[last].insertRule("#bugreport:hover, #rate_extension:hover{ background:#eee; }", position_of_last_rule);
 		}
 		else window.setTimeout(adjustCSS, 50);
-	})();
+	}
 	
 	window.addEventListener("DOMContentLoaded", function()
 	{
@@ -71,17 +74,19 @@
 		var savebutton = printbutton.cloneNode(true);
 		savebutton.id = "saveToolbarButton";
 		var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+")((?:\\?|\\#).*)*)$","i");
-		if(document.URL.split("&url=")[1].split("&docid")[0].match(extended_docs)) // for extended functions selected:
+		
+		// for extended functions selected if no <a download>-support is available:
+		if(document.URL.split("&url=")[1].split("&docid")[0].match(extended_docs) && !("download" in document.createElement("a")))
 		{
 			savebutton.dataset.tooltip = "Rightclick here and choose \"Save Linked Content as...\" to download this file";
 			savebutton.setAttribute("aria-label", "Rightclick here and choose \"Save Linked Content as...\" to download this file");
 			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' onclick='javascript:return false;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
 		}
-		else //for basic mode:
+		else //for basic mode or download-property-support in a-tags:
 		{
 			savebutton.dataset.tooltip = "Save file (Ctrl+S)";
 			savebutton.setAttribute("aria-label", "Save file (Ctrl+S)");
-			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
+			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' download><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
 			savebutton.onmouseover = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_hover_src; };
 			savebutton.onmouseout = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_src; };
 		}
