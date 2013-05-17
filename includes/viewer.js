@@ -15,11 +15,18 @@
 			var position_of_last_rule = document.styleSheets[document.styleSheets.length-1].cssRules.length;
 			
 			// set top to 28px to prevent the documents jumping around during page loading:
-			document.styleSheets[last].insertRule("#content-pane, #thumb-pane{ top:28px !important; }", position_of_last_rule);
-			document.styleSheets[last].insertRule("#controlbar{ position:fixed !important; top:28px !important; z-index:99 !important; display:none; transition:500ms; -o-transition:500ms; box-shadow:0 5px 10px -5px rgba(0,0,0,0.3); }", position_of_last_rule); // grey control bar
-			document.styleSheets[last].insertRule("#docex_titlediv{ float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; -o-transition:0.5s;", position_of_last_rule);
-			document.styleSheets[last].insertRule("#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -2px 0 #FFF, 0 3px 5px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc; }", position_of_last_rule);
-			document.styleSheets[last].insertRule("#bugreport:hover, #rate_extension:hover{ background:#eee; }", position_of_last_rule);
+			try{
+				document.styleSheets[last].insertRule("#content-pane, #thumb-pane{ top:28px !important; }", position_of_last_rule);
+				document.styleSheets[last].insertRule("#controlbar{ position:fixed !important; top:28px !important; z-index:99 !important; display:none; transition:500ms; -o-transition:500ms; box-shadow:0 5px 10px -5px rgba(0,0,0,0.3); }", position_of_last_rule); // grey control bar
+				document.styleSheets[last].insertRule("#docex_titlediv{ float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; -o-transition:0.5s;", position_of_last_rule);
+				document.styleSheets[last].insertRule("#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -2px 0 #FFF, 0 3px 5px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc; }", position_of_last_rule);
+				document.styleSheets[last].insertRule("#bugreport:hover, #rate_extension:hover{ background:#eee; }", position_of_last_rule);
+			}
+			catch(e)
+			{
+				console.log("Documents extension: Error manipulating CSS: "+e.message + "\nretrying...");
+				window.setTimeout(adjustCSS, 100); // retry in 100ms
+			}
 		}
 		else window.setTimeout(adjustCSS, 50);
 	}
