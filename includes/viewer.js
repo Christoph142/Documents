@@ -24,7 +24,7 @@
 		else window.setTimeout(adjustCSS, 50);
 	}
 	
-	window.addEventListener("DOMContentLoaded", function()
+	window.opera.addEventListener("BeforeEvent.DOMContentLoaded", function()
 	{
 		document.getElementById("content-pane").style.height = document.body.offsetHeight-28+"px";
 		document.getElementById("thumb-pane").style.height = document.body.offsetHeight-28+"px";
