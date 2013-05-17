@@ -67,7 +67,7 @@
 			document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
 			document.getElementById("rate_extension").onclick = function(){
 				window.open("https://addons.opera.com/extensions/details/documents/#feedback-container"); };
-		}catch(e){ /* menu altered */ }
+		}catch(e){ console.log("Documents extension: Google Docs Viewer's structure changed: "+e.message); }
 		
 		// grey control bar: insert a button to save the documents:
 		var printbutton	= document.getElementById("printToolbarButton");
