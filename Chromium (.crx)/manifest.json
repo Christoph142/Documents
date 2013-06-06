@@ -1,0 +1,26 @@
+{	
+	"name"				: "Documents",
+	"description"		: "__MSG_description__",
+	"developer"			: {"name" : "Christoph D."},
+	"homepage_url"		: "http://my.opera.com/christoph142/blog",
+	
+	"default_locale"	: "en",
+	"version"			: "3.0",
+	"icons"				: { "16": "images/contextmenu.png", /*"48": "images/icon48.png",*/ "128": "images/icon@2x.png" },
+	
+	"content_scripts" :
+	[{
+		  "matches"		: ["<all_urls>"],
+		  "css"			: ["includes/.css"],
+		  "js"			: ["includes/.js"],
+		  "run_at"		: "document_start",
+		  "all_frames"	: true
+	}],
+	
+	"background"		: {"scripts": ["background.js"]},
+  
+	"permissions"		: ["contextMenus", "storage"],
+	"options_page"		: "options/options.html",
+	
+	"manifest_version"	: 2
+}

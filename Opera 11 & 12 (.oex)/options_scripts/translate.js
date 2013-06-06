@@ -1,0 +1,101 @@
+function change_lang(new_lang){
+	widget.preferences.lang = new_lang;
+	document.getElementById("current_lang").src = "images/"+new_lang+".jpg";
+	window.setTimeout(function(){ location.reload(); }, 300);
+}
+
+function _(to_translate){
+	if(widget.preferences.lang == "auto") document.write( lang[autolang][to_translate] );
+	else document.write( lang[widget.preferences.lang][to_translate] );
+}
+
+var lang = {
+	"ar" : {
+		"by" : "من طرف",
+		"Options" : "خيارات",
+		"choosedocs" : "ما نوع الملفات التي تريد استعراضها باستعمال هذه الإضافة",
+		"0old" : "الملفات المدعومة بهذه الإضافة",
+		"0new" : "إستعمال قائمة السياق فقط",
+		"1" : "  الوظيفة الأساسية (الروابط تفتح باستعمال هذه الأضافة، قياسي) ",
+		"2" : "الوظيفة الموسعة (الأساسية + وظائف إضافية. لتفعيل هذا الخيار يجب تطبيق الخطوات المذكورة أسفله; حذاري: أوبرا لن تستطيع بعد الآن فتح الملفات  (المحلية)  الموجودة في الحاسب) ",
+		"manual_setup_instruction" : "لجعل الروابط -التي قمت بجرها، أو لصقها في شريط العناوين، أو قمت بتحديدها من قائمة المحفوظات-قم بالتالي: إعدادات ← تفضيلات (CTRL F12) خيارات متقدمة ← عمليات التحميل. قم بإزالة تحديد \"إخفاء أنواع الملفات المفتوحة بواسطة أوبرا\". الآن اختر أي ملف مدعوم من هذه الإضافة مثال pdf, doc و انقر على \"تحرير\" و قم بتحديد 'افتح بواسطة أوبرا' و انقر على 'موافق'. قم بإعادة الخطوات 3 و4 مع كل الملفات المدعومة والتي تريد للوظائف الموسعة أن تعمل معها. ثم انقر على 'موافق' لغلق نافذة الإعدادات. الآن حدد الاختيار الثالث (الوظيفة الموسعة) لكل أنواع الملفات التي قمت بتحريرها في إعدادات أوبرا",
+		"footer" : "للرد على الأستفسارات و المساعدة لا تتردد في الأتصال بي<br>Thanks to <a href='http://my.opera.com/netmain' target='_blank' style='background-color:transparent;'>Netmain</a> for translating!"
+	},
+	"de" : {
+		"by" : "von",
+		"Options" : "Optionen",
+		"choosedocs" : "Welche Dokumente sollen mit dieser Erweiterung geöffnet werden?",
+		"0old" : "nicht mit Documents öffnen",
+		"0new" : "nur das Kontextmenü benutzen",
+		"1" : "Basis-Funktion (Links werden mit Documents geöffnet; Standard)",
+		"2" : "Erweitert (Basis- & erweiterte Funktionen; auswählen, wenn das zusätzliche Setup (siehe unten) konfiguriert wurde; Vorsicht: lokale Dateien können nicht mehr in Opera angezeigt werden)",
+		"manual_setup_instruction" : "Damit in die Adress-Leiste eingefügte oder gezogene Links und Dateien, die über die History aufgerufen werden unterstützt werden musst du folgendes tun:<br>1. rufe Einstellungen -> Einstellungen... (Strg+F12) -> Erweitert -> Downloads auf<br>2. deaktiviere 'In Opera zu öffnende Dateitypen ausblenden'<br>3. wähle ein beliebiges unterstütztes Format (z.B. pdf) und klicke auf 'Bearbeiten...'<br>4. wähle 'Mit Opera öffnen' und klicke 'OK'<br><br>Wiederhole Schritte 3 und 4 für jeden unterstützten Datei-Typ für den die beiden oben genannten Features funktionieren sollen. Bestätige am Ende mit 'OK' um die Einstellungen zu schließen. Jetzt wähle in den Einstellungen von Documents die 3. Option (Erweitert) für die ausgewählten Dateitypen und es kann losgehn :)",
+		"footer" : "Für Feedback, Fragen und Wünsche könnt ihr mich gerne auch direkt kontaktieren"
+	},
+	"en" : {
+		"by" : "by",
+		"Options" : "Options",
+		"choosedocs" : "Which kinds of documents do you want to associate with this extension?",
+		"0old" : "not handled by Documents",
+		"0new" : "only use the context menu",
+		"1" : "basic function (links are opened with Documents; standard)",
+		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
+		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+		"footer" : "For Feedback and help don't hesitate to contact me"
+	},
+	"fr" : {
+		"by" : "de",
+		"Options" : "Options",
+		"choosedocs" : "Quels types de documents veux-tu obtenir ouvert par cette extension?",
+		"0old" : "pas traitées par Documents",
+		"0new" : "seulement utilise le menu contextuel",
+		"1" : "fonction de base (les liens sont ouverts avec Documents; standard)",
+		"2" : "fonction étendue (fonction de base + fonctions étendues; choisi si tu as fait la configuration supplémentaire (voir ci-dessous); Attention: local files can't be viewed in Opera anymore)",
+		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+		"footer" : "Pour rétroaction et de l'aide, n'hésite pas à me contacter"
+	},
+	"nb" : {
+		"by" : "by",
+		"Options" : "Valg",
+		"choosedocs" : "Hvilke dokumenttyper ønsker du å åpne med denne utvidelsen?",
+		"0old" : "ikke håndtert av Dokumenter",
+		"0new" : "only use the context menu",
+		"1" : "standard funksjonalitet (lenker er åpnet med Dokumenter; forhåndsvalgt)",
+		"2" : "utvidet funksjonalitet (standard og utvidede funksjoner; velg dette om du har gjort andre valg (se under); Attention: local files can't be viewed in Opera anymore)",
+		"manual_setup_instruction" : "Gjør følgende for å få lenker—som du har dratt og limt inn i adressefeltet eller valgt i historievisning—til å fungere:<br>1. Instillinger -> Valg (Ctrl+F12) -> Avansert -> Nedlastninger<br>2. avmerk 'skjul filtyper som åpnes med Opera'<br>3. velg en hvilkensomhelst støttet utvidelse fra listen (f.eks. pdf) og trykk Endre<br>4. velg 'Åpne med Opera' og klikk OK<br><br>Gjenta steg 3–4 for alle støttede filtyper. Trykk til slutt OK for å lukke Instillinger. Velg så utvidet funksjonalitet for de samme filtypene i valg for Dokumenter og du er ferdig :)",
+	    "footer" : "For å gi tilbakemeldinger og be om hjelp, ikke nøl med å kontakte meg<br>takk til<a href='https://twitter.com/Aeyoun' target='_blank' style='background-color:transparent;'>Daniel</a>for oversettelsen!"
+	},
+	"pl" : {
+		"by" : "autorstwa",
+		"Options" : "Ustawienia",
+		"choosedocs" : "Dokumentami w których formatach ma się zająć rozszerzenie?",
+		"0old" : "Documents nie zajmuje się tym formatem",
+		"0new" : "jedynie menu podręczne",
+		"1" : "prosta obsługa (Documents otwiera dokumenty wywołane kliknięciem łącza; domyślnie)",
+		"2" : "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz niżej); Attention: local files can't be viewed in Opera anymore)",
+		"manual_setup_instruction" : "Aby otwierać łącza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co następuje:<br>1. otwórz Ustawienia → Preferencje (Ctrl+F12) → Zaawansowane → Pobieranie<br>2. odznacz „Ukryj typy plików obsługiwane przez Operę”<br>3. wybierz któreś z rozszerzeń obsługiwanych przez rozszerzenie, np. pdf i kliknij „Edytuj…”<br>4. zaznacz „Otwórz w Operze” i zatwierdź<br><br>Kroki 3 i 4 powtórz dla każdego typu pliku, który ma być obsługiwany w wyżej wymienionych sytuacjach. Po tym klikając OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzecią z opcji (zaawansowana obsuga) wobec właśnie ustawionych formatów . To wszystko :)",
+		"footer" : "Nie wahaj się kontaktować ze mną, jeśli chcesz wyrazić swoją opinię lub pomóc<br>Dzięki <a href='http://my.opera.com/chocimir' target='_blank' style='background-color:transparent;'>Chocimier</a> za tłumaczenia!"
+	},
+	"ru" : {
+		"by" : "by",
+		"Options" : "Настройка",
+		"choosedocs" : "Which kinds of documents do you want to associate with this extension?",
+		"0old" : "not handled by Documents",
+		"0new" : "only use the context menu",
+		"1" : "basic function (links are opened with Documents; standard)",
+		"2" : "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
+		"manual_setup_instruction" : "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+		"footer" : "Для обратной связи и помощи не стесняйтесь связатся со мной"
+	},
+	"tr" : {
+		"by" : "by",
+		"Options" : "Ayarlar",
+		"choosedocs" : "Bu eklentiyle hangi belge türlerini ilişkilendirmek istiyorsunuz?",
+		"0old" : "Documents tarafından kullanılamadı",
+		"0new" : "sadece içerik menüsünü kullan",
+		"1" : "temel fonksiyon (linkler Documents tarafından açılır; standart)",
+		"2" : "gelişmiş fonksiyon (temel + gelişmiş fonksiyon; eğer ekstradan kurulum yaptıysanız (aşağıya bakınız); Attention: local files can't be viewed in Opera anymore)",
+		"manual_setup_instruction" : "Adres satırına yapıştırdığınız, taşıdığınız veya tarama geçmişinizden seçtiğiniz seçtiğiniz linkleri Documents ile açmak için: <br>1. Ayarlar -> Tercihler (k. Ctr+F12) -> Gelişmiş -> İndirmeler<br>2. \'Opera\'yla açılan dosya türünü gizle\' işaretini kaldırın.<br>Listeden desteklenen uzantıları seçin. (pdf gibi) ve düzenleye tıklayın.<br>\'Opera\'yla aç\'  ve Tamama tıklayın.<br><br>3. ve 4. adımları desteklenmesini istediğiniz her uzantı için tekrar yapın. Tercihleri kapatmak için Tamam düğmesine tıklayın. Şimdi ise Documents için düşündüğünüz tüm dosya tipleri için üçüncü seçeneği (gelişmiş fonksiyon) işaretleyin ve halloldu.",
+		"footer" : "Geribildirim ve yardım için benimle iletişime geçmekten çekinmeyin"
+	}
+};
