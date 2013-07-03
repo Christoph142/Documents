@@ -11,7 +11,7 @@
 	"content_scripts" :
 	[{
 		  "matches"		: ["<all_urls>"],
-		  "js"			: ["includes/viewer.js", "includes/execmanip.js", "includes/linkmanip.js", "includes/rightclick.js"],
+		  "js"			: ["includes/viewer.js", "includes/linkmanip.js"],
 		  "run_at"		: "document_start",
 		  "all_frames"	: true
 	}],

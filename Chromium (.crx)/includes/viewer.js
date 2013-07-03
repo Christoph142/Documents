@@ -1,14 +1,9 @@
-// ==UserScript==
-// @include https://docs.google.com/viewer?docex=1&*
-// ==/UserScript==
-
 (function()
 {
-	window.opera.addEventListener("BeforeEvent", adjustCSS ,false);
-	function adjustCSS()
+	if(document.URL.indexOf("docs.google.com/viewer?docex=1") === -1) return;
+	
+	(function adjustCSS()
 	{
-		window.opera.removeEventListener("BeforeEvent", adjustCSS ,false);
-		
 		if(document.styleSheets.length > 0)
 		{
 			var last = document.styleSheets.length-1;
@@ -29,9 +24,9 @@
 			}
 		}
 		else window.setTimeout(adjustCSS, 50);
-	}
+	})();
 	
-	window.opera.addEventListener("BeforeEvent.DOMContentLoaded", function()
+	window.addEventListener("DOMContentLoaded", function()
 	{
 		document.getElementById("content-pane").style.height = document.body.offsetHeight-28+"px";
 		document.getElementById("thumb-pane").style.height = document.body.offsetHeight-28+"px";
