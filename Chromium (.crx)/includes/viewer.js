@@ -145,32 +145,7 @@
 	}
 	
 	function localize_it(savebutton){
-		var strings = {
-			"### DEFAULT: English ###" : {
-				"bugreport" : "Report an error",
-				"rate_extension" : "Rate Documents",
-				"Save file" : "Save file (Ctrl+S)",
-				"Save file rightclick" : "Rightclick here and choose \"Save Linked Content as...\" to download this file"
-			},
-			"de" : {
-				"bugreport" : "Melde einen Fehler",
-				"rate_extension" : "Bewerte Documents",
-				"Save file" : "Datei speichern (Ctrl+S)",
-				"Save file rightclick" : "Klicke hier mit der rechten Maustaste und wähle \"Verlinkten Inhalt speichern als...\" um die Datei herunterzuladen"
-			},
-			"fr" : {
-				"bugreport" : "Rapporte une erreur",
-				"rate_extension" : "Evalue Documents",
-				"Save file" : "Enregistre le fichier (Ctrl+S)",
-				"Save file rightclick" : "Fais un clic droit ici et choisis \"Enregistrer le contenu lié sous ... \" pour télécharger ce fichier"
-			},
-			"tr" : {
-				"bugreport" : "Hata bildir",
-				"rate_extension" : "Documents'i oyla",
-				"Save file" : "Dosyayı kaydet (Ctrl+S)",
-				"Save file rightclick" : "Dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin"
-			}
-		};
+		
 		var lang = widget.preferences.lang === "auto" ? window.navigator.language : widget.preferences.lang;
 		
 		try{
