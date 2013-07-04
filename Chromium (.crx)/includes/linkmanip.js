@@ -1,5 +1,7 @@
 (function()
 {
+	if(document.URL.indexOf("docs.google.com/viewer?docex=1") !== -1) return;
+	
 	chrome.extension.sendMessage({data:"settings"}, function(response){ // get settings (filled with default values) from background.js
 		w = response;
 		window.addEventListener("DOMContentLoaded", change_links, false);
