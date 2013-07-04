@@ -7,7 +7,7 @@
 		var docStyle = 	"#content-pane, #thumb-pane{ top:28px !important; }\n"+
 						"#controlbar{ position:fixed !important; top:28px !important; z-index:99 !important; display:none; transition:500ms; box-shadow:0 5px 10px -5px rgba(0,0,0,0.3); } \n"+ // grey control bar
 						"#docex_titlediv{ float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; }\n"+
-						"#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -4px 0 4px #FFF, 0 0 9px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc; }\n"+
+						"#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0; z-index:98; border-bottom:1px solid #ddd; }\n"+
 						"#bugreport:hover, #rate_extension:hover{ background:#eee; }";
 	
 		var style = document.createElement("style");
