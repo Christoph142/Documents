@@ -2,32 +2,20 @@
 {
 	if(document.URL.indexOf("docs.google.com/viewer?docex=1") === -1) return;
 	
-	(function adjustCSS()
-	{
-		if(document.styleSheets.length > 0)
-		{
-			var last = document.styleSheets.length-1;
-			var position_of_last_rule = document.styleSheets[document.styleSheets.length-1].cssRules.length;
-			
-			// set top to 28px to prevent the documents jumping around during page loading:
-			try{
-				document.styleSheets[last].insertRule("#content-pane, #thumb-pane{ top:28px !important; }", position_of_last_rule);
-				document.styleSheets[last].insertRule("#controlbar{ position:fixed !important; top:28px !important; z-index:99 !important; display:none; transition:500ms; -o-transition:500ms; box-shadow:0 5px 10px -5px rgba(0,0,0,0.3); }", position_of_last_rule); // grey control bar
-				document.styleSheets[last].insertRule("#docex_titlediv{ float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; -o-transition:0.5s;", position_of_last_rule);
-				document.styleSheets[last].insertRule("#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -2px 0 #FFF, 0 3px 5px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc; }", position_of_last_rule);
-				document.styleSheets[last].insertRule("#bugreport:hover, #rate_extension:hover{ background:#eee; }", position_of_last_rule);
-			}
-			catch(e)
-			{
-				console.log("Documents extension: Error manipulating CSS: "+e.message + "\nretrying...");
-				window.setTimeout(adjustCSS, 100); // retry in 100ms
-			}
-		}
-		else window.setTimeout(adjustCSS, 50);
-	})();
-	
 	window.addEventListener("DOMContentLoaded", function()
 	{
+		var docStyle = 	"#content-pane, #thumb-pane{ top:28px !important; }\n"+
+						"#controlbar{ position:fixed !important; top:28px !important; z-index:99 !important; display:none; transition:500ms; box-shadow:0 5px 10px -5px rgba(0,0,0,0.3); } \n"+ // grey control bar
+						"#docex_titlediv{ float:right; height:22px; padding-top:5px; color:#666; transition:0.5s; }\n"+
+						"#menubar-shadow{ position:fixed; height:1px; width:100%; top:27px; left:0px; z-index:98; box-shadow:0 -4px 0 4px #FFF, 0 0 9px rgba(0,0,0,0.45); border:none; border-bottom:1px solid #ccc; }\n"+
+						"#bugreport:hover, #rate_extension:hover{ background:#eee; }";
+	
+		var style = document.createElement("style");
+		style.setAttribute("type","text/css");
+		style.id = "Documents_extension_style";
+		style.innerHTML = docStyle;
+		document.getElementsByTagName("head")[0].appendChild(style);
+		
 		document.getElementById("content-pane").style.height = document.body.offsetHeight-28+"px";
 		document.getElementById("thumb-pane").style.height = document.body.offsetHeight-28+"px";
 		document.getElementById("thumb-pane-lower").style.height = document.body.offsetHeight-28+"px";
@@ -62,11 +50,11 @@
 			document.getElementById(":j").outerHTML = ""; // separator
 			document.getElementById(":k").outerHTML = ""; // compact control elements
 			document.getElementById(":o").id = "bugreport";
-			document.getElementById("bugreport").firstChild.innerHTML = "Report an error";
+			document.getElementById("bugreport").firstChild.innerHTML = chrome.i18n.getMessage("bugreport");
 			document.getElementById("bugreport").onclick = function(){
 				window.open("https://addons.opera.com/extensions/details/documents/?reports#feedback-container"); };
 			document.getElementById(":p").id = "rate_extension";
-			document.getElementById("rate_extension").firstChild.innerHTML = "Rate Documents";
+			document.getElementById("rate_extension").firstChild.innerHTML = chrome.i18n.getMessage("rate_extension");
 			document.getElementById("rate_extension").onclick = function(){
 				window.open("https://addons.opera.com/extensions/details/documents/#feedback-container"); };
 		}catch(e){ console.log("Documents extension: Google Docs Viewer's structure changed: "+e.message); }
@@ -75,32 +63,19 @@
 		var printbutton	= document.getElementById("printToolbarButton");
 		var savebutton = printbutton.cloneNode(true);
 		savebutton.id = "saveToolbarButton";
-		var extended_docs = new RegExp("^(?:[^\?]+\\.[^\?]+\\/[^\?]+\\.(?:"+widget.preferences.extended_docs+")((?:\\?|\\#).*)*)$","i");
+		savebutton.dataset.tooltip = chrome.i18n.getMessage("save_file");
+		savebutton.setAttribute("aria-label", chrome.i18n.getMessage("save_file"));
+		savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' download><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
+		savebutton.onmouseover = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_hover_src; };
+		savebutton.onmouseout = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_src; };
 		
-		// for extended functions selected if no <a download>-support is available:
-		if(document.URL.split("&url=")[1].split("&docid")[0].match(extended_docs) && !("download" in document.createElement("a")))
-		{
-			savebutton.dataset.tooltip = "Rightclick here and choose \"Save Linked Content as...\" to download this file";
-			savebutton.setAttribute("aria-label", "Rightclick here and choose \"Save Linked Content as...\" to download this file");
-			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' onclick='javascript:return false;'><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
-		}
-		else //for basic mode or download-property-support in a-tags:
-		{
-			savebutton.dataset.tooltip = "Save file (Ctrl+S)";
-			savebutton.setAttribute("aria-label", "Save file (Ctrl+S)");
-			savebutton.firstChild.firstChild.innerHTML = "<a href='"+document.URL.split("&url=")[1].split("&docid")[0]+"' style='cursor:default;' download><img src='"+savebutton_src+"' height='29' style='margin-top:-2px;'></a>";
-			savebutton.onmouseover = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_hover_src; };
-			savebutton.onmouseout = function(){ savebutton.getElementsByTagName("img")[0].src = savebutton_src; };
-		}
-		// change language of inserted menu items and button if necessary:
-		localize_it(savebutton);
 		// and some space to keep the alignments:
 		var spacer = document.createElement("div");
 		spacer.className = "goog-inline-block separator";
 		printbutton.parentNode.insertBefore(savebutton, printbutton);
 		printbutton.parentNode.insertBefore(spacer, printbutton);
-		// don't show print(PDF)-button if viewed file is a pdf or extended functions is active for PDFs:
-		if(document.getElementsByClassName("docs-title-inner")[0].innerHTML.match(new RegExp("\.pdf","i")) || widget.preferences.pdf === "3"){
+		// don't show print(PDF)-button if viewed file is a pdf:
+		if(document.getElementsByClassName("docs-title-inner")[0].innerHTML.match(new RegExp("\.pdf","i"))){
 			document.getElementById("printToolbarButton").outerHTML = "";
 			document.getElementById("separator2").outerHTML = "";
 		}
@@ -137,26 +112,6 @@
 			document.getElementById("menubar-shadow").style.display = null;
 			controlbar_is_visible = 0;
 		}
-	}
-	
-	function localize_it(savebutton){
-		
-		var lang = widget.preferences.lang === "auto" ? window.navigator.language : widget.preferences.lang;
-		
-		try{
-			if(strings[lang]){
-				document.getElementById("bugreport").firstChild.innerHTML = strings[lang]["bugreport"];
-				document.getElementById("rate_extension").firstChild.innerHTML = strings[lang]["rate_extension"];
-				if(savebutton.dataset.tooltip === "Save file (Ctrl+S)"){
-					savebutton.dataset.tooltip = strings[lang]["Save file"];
-					savebutton.setAttribute("aria-label", strings[lang]["Save file"]);
-				}
-				else {
-					savebutton.dataset.tooltip = strings[lang]["Save file rightclick"];
-					savebutton.setAttribute("aria-label", strings[lang]["Save file rightclick"]);
-				}
-			}
-		}catch(e){ /* menu altered */ }
 	}
 	
 	function check_title(){
