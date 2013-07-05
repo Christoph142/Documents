@@ -1,0 +1,62 @@
+{
+    "lang": {
+        "message": "pl",
+        "description": ""
+    },
+    "description": {
+        "message": "Przegl\u0105darka dokument\u00f3w (np. PDF, MS Word) prosto z Sieci",
+        "description": ""
+    },
+    "0old": {
+        "message": "Documents nie zajmuje si\u0119 tym formatem",
+        "description": ""
+    },
+    "footer": {
+        "message": "Dzi\u0119ki, \u017ce zainstalowa\u0142a\u015b(-e\u015b) to rozszerzenie. Nie wahaj si\u0119 wysy\u0142a\u0107 mi opinii ani pyta\u0144",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
+        "description": ""
+    },
+    "0new": {
+        "message": "jedynie menu podr\u0119czne",
+        "description": ""
+    },
+    "Options": {
+        "message": "Ustawienia",
+        "description": ""
+    },
+    "1": {
+        "message": "prosta obs\u0142uga (Documents otwiera dokumenty wywo\u0142ane klikni\u0119ciem \u0142\u0105cza; domy\u015blnie)",
+        "description": ""
+    },
+    "2": {
+        "message": "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz ni\u017cej); Attention: local files can't be viewed in Opera anymore)",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Report an error",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Save file (Ctrl+S)",
+        "description": ""
+    },
+    "choosedocs": {
+        "message": "Dokumentami w kt\u00f3rych formatach ma si\u0119 zaj\u0105\u0107 rozszerzenie?",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Aby otwiera\u0107 \u0142\u0105cza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co nast\u0119puje:<br>1. otw\u00f3rz Ustawienia \u2192 Preferencje (Ctrl+F12) \u2192 Zaawansowane \u2192 Pobieranie<br>2. odznacz \u201eUkryj typy plik\u00f3w obs\u0142ugiwane przez Oper\u0119\u201d<br>3. wybierz kt\u00f3re\u015b z rozszerze\u0144 obs\u0142ugiwanych przez rozszerzenie, np. pdf i kliknij \u201eEdytuj\u2026\u201d<br>4. zaznacz \u201eOtw\u00f3rz w Operze\u201d i zatwierd\u017a<br><br>Kroki 3 i 4 powt\u00f3rz dla ka\u017cdego typu pliku, kt\u00f3ry ma by\u0107 obs\u0142ugiwany w wy\u017cej wymienionych sytuacjach. Po tym klikaj\u0105c OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzeci\u0105 z opcji (zaawansowana obsuga) wobec w\u0142a\u015bnie ustawionych format\u00f3w . To wszystko :)",
+        "description": ""
+    },
+    "by": {
+        "message": "autorstwa",
+        "description": ""
+    },
+    "rate_extension": {
+        "message": "Rate Documents",
+        "description": ""
+    }
+}

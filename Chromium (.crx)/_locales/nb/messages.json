@@ -1,0 +1,62 @@
+{
+    "lang": {
+        "message": "nb",
+        "description": ""
+    },
+    "description": {
+        "message": "Viewer for elektroniske dokumenter (f.eks PDF, MS Word)",
+        "description": ""
+    },
+    "0old": {
+        "message": "ikke h\u00e5ndtert av Documents",
+        "description": ""
+    },
+    "footer": {
+        "message": "Takk for at du installerte denne utvidelsen. Du kan kontakte meg (p\u00e5 engelsk) n\u00e5r som helst for \u00e5 gi tilbakemelding og stille sp\u00f8rsm\u00e5l.",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
+        "description": ""
+    },
+    "0new": {
+        "message": "only use the context menu",
+        "description": ""
+    },
+    "Options": {
+        "message": "Valg",
+        "description": ""
+    },
+    "1": {
+        "message": "standard funksjonalitet (lenker er \u00e5pnet med Dokumenter; forh\u00e5ndsvalgt)",
+        "description": ""
+    },
+    "2": {
+        "message": "utvidet funksjonalitet (standard og utvidede funksjoner; velg dette om du har gjort andre valg (se under); Attention: local files can't be viewed in Opera anymore)",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Rapportere en feil",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Lagre filen (Ctrl + S)",
+        "description": ""
+    },
+    "choosedocs": {
+        "message": "Hvilke dokumenttyper \u00f8nsker du \u00e5 \u00e5pne med denne utvidelsen?",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Gj\u00f8r f\u00f8lgende for \u00e5 f\u00e5 lenker\u2014som du har dratt og limt inn i adressefeltet eller valgt i historievisning\u2014til \u00e5 fungere:<br>1. Instillinger -> Valg (Ctrl+F12) -> Avansert -> Nedlastninger<br>2. avmerk 'skjul filtyper som \u00e5pnes med Opera'<br>3. velg en hvilkensomhelst st\u00f8ttet utvidelse fra listen (f.eks. pdf) og trykk Endre<br>4. velg '\u00c5pne med Opera' og klikk OK<br><br>Gjenta steg 3\u20134 for alle st\u00f8ttede filtyper. Trykk til slutt OK for \u00e5 lukke Instillinger. Velg s\u00e5 utvidet funksjonalitet for de samme filtypene i valg for Dokumenter og du er ferdig :)",
+        "description": ""
+    },
+    "by": {
+        "message": "by",
+        "description": ""
+    },
+    "rate_extension": {
+        "message": "Ranger Documents",
+        "description": ""
+    }
+}
