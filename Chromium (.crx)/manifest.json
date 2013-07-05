@@ -18,7 +18,7 @@
 	
 	"background"		: {"scripts": ["background.js"]},
 	
-	"permissions"		: ["contextMenus", "storage"],
+	"permissions"		: ["storage"],
 	"options_page"		: "options/options.html",
 	
 	"manifest_version"	: 2

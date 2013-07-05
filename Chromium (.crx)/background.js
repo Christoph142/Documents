@@ -22,26 +22,5 @@ function update_settings(){ chrome.storage.sync.get( null, function(storage){
 update_settings();
 
 chrome.extension.onMessage.addListener( function(request, sender, sendResponse){
-	if		(request.data === "settings")						sendResponse(w);
-	else if (request.data === "update_settings")				update_settings();
-	else if	(request.data === "show_contextmenu")				show_contextmenu(request.string);
-	else if	(request.data === "hide_contextmenu")				hide_contextmenu();
+	if(request.data === "settings") sendResponse(w);
 });
-
-var contextmenu = false;
-function show_contextmenu(s)
-{
-	if(!contextmenu)chrome.contextMenus.create({ "id":"ms_contextmenu",	"title" : chrome.i18n.getMessage("contextmenu_"+s), "onclick" : contextmenu_click});
-	else			chrome.contextMenus.update("ms_contextmenu", {"title" : chrome.i18n.getMessage("contextmenu_"+s)});
-	contextmenu = true;
-}
-function contextmenu_click(){
-	chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
-		chrome.tabs.sendMessage(tabs[0].id, {data:"ms_toggle_visibility"});
-	});
-}
-function hide_contextmenu()
-{
-	if(!contextmenu) return;
-	chrome.contextMenus.remove("ms_contextmenu"); contextmenu = false;
-}
