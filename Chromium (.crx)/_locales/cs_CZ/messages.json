@@ -1,0 +1,62 @@
+{
+    "lang": {
+        "message": "cs",
+        "description": ""
+    },
+    "description": {
+        "message": "Prohl\u00ed\u017ee\u010d pro on-line dokumenty (nap\u0159. PDF, MS Word)",
+        "description": ""
+    },
+    "0old": {
+        "message": "ne\u0159e\u0161\u00ed roz\u0161\u00ed\u0159en\u00ed Documents",
+        "description": ""
+    },
+    "footer": {
+        "message": "D\u00edky za instalov\u00e1n\u00ed tohoto roz\u0161\u00ed\u0159en\u00ed. Kdykoli m\u011b m\u016f\u017eete kontaktovat pro zp\u011btnou vazbu a v p\u0159\u00edpad\u011b ot\u00e1zek.",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Zde klikn\u011bte prav\u00fdm tla\u010d\u00edtkem my\u0161i a vyberte \"Ulo\u017eit obsah jako...\" pro sta\u017een\u00ed tohoto souboru",
+        "description": ""
+    },
+    "0new": {
+        "message": "pou\u017e\u00edvat jen kontextov\u00e9 menu",
+        "description": ""
+    },
+    "Options": {
+        "message": "Mo\u017enosti",
+        "description": ""
+    },
+    "1": {
+        "message": "z\u00e1kladn\u00ed funkce (odkazy jsou otev\u0159eny v Documents; standard)",
+        "description": ""
+    },
+    "2": {
+        "message": "roz\u0161\u00ed\u0159en\u00e9 funkce (z\u00e1kladn\u00ed + roz\u0161\u00ed\u0159en\u00e9 funkce; vyberte, zda jste provedli dal\u0161\u00ed nastaven\u00ed (pod\u00edvejte se n\u00ed\u017ee); Upozorn\u011bn\u00ed: lok\u00e1ln\u00ed soubory nem\u016f\u017eou b\u00fdt zobrazov\u00e1ny v Ope\u0159e)",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Nahl\u00e1sit chybu",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Ulo\u017eit soubor (Ctrl+S)",
+        "description": ""
+    },
+    "choosedocs": {
+        "message": "S jak\u00fdmi typy dokument\u016f chcete, aby se toto roz\u0161\u00ed\u0159en\u00ed asociovalo?",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+        "description": ""
+    },
+    "by": {
+        "message": "od",
+        "description": ""
+    },
+    "rate_extension": {
+        "message": "Ohodnotit roz\u0161\u00ed\u0159en\u00ed Documents",
+        "description": ""
+    }
+}

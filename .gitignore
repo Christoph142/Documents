@@ -166,3 +166,5 @@ pip-log.txt
 
 .gitignore
 .gitattributes
+
+BAK/

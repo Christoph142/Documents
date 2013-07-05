@@ -1,0 +1,62 @@
+{
+    "lang": {
+        "message": "fr",
+        "description": ""
+    },
+    "description": {
+        "message": "Viewer pour les documents onlines (p.e. PDF, MS Word)",
+        "description": ""
+    },
+    "0old": {
+        "message": "pas trait\u00e9es par Documents",
+        "description": ""
+    },
+    "footer": {
+        "message": "Merci d'avoir install\u00e9 cette extension. Tu peux me contacter toujours pour des commentaires et des questions.",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Fais un clic droit ici et choisis \"Enregistrer le contenu li\u00e9 sous ... \" pour t\u00e9l\u00e9charger ce fichier",
+        "description": ""
+    },
+    "0new": {
+        "message": "seulement utilise le menu contextuel",
+        "description": ""
+    },
+    "Options": {
+        "message": "Options",
+        "description": ""
+    },
+    "1": {
+        "message": "fonction de base (les liens sont ouverts avec Documents; standard)",
+        "description": ""
+    },
+    "2": {
+        "message": "fonction \u00e9tendue (fonction de base + fonctions \u00e9tendues; choisi si tu as fait la configuration suppl\u00e9mentaire (voir ci-dessous); Attention: local files can't be viewed in Opera anymore)",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Rapporte une erreur",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Enregistre le fichier (Ctrl+S)",
+        "description": ""
+    },
+    "choosedocs": {
+        "message": "Quels types de documents veux-tu obtenir ouvert par cette extension?",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+        "description": ""
+    },
+    "by": {
+        "message": "de",
+        "description": ""
+    },
+    "rate_extension": {
+        "message": "Evalue Documents",
+        "description": ""
+    }
+}
