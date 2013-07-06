@@ -48,7 +48,7 @@
         "description": ""
     },
     "manual_setup_instruction": {
-        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+        "message": "Pour rendre les liens, que vous avez gliss\u00e9 ou coll\u00e9 \u00e0 la barre d'adresse ou s\u00e9lectionn\u00e9 dans votre historique de navigation, fonctionnent, veuillez faire le suivant: \n1. Allez sur  R\u00e9glages -> Pr\u00e9f\u00e9rences (Ctrl+F12) -> Avanc\u00e9 -> T\u00e9l\u00e9chargements\n2. d\u00e9cochez 'cacher ceux ouvert par Opera' \n3. Maintenant, choisissez toute extension support\u00e9e dans la liste (ex. PDF) et cliquez sur \u00e9diter.\n4.Cochez 'Ouvrir avec Opera' et cliquez sur OK\nr\u00e9p\u00e9tez les \u00e9tapes 3 et 4 avec tous les types de fichiers support\u00e9s avec lesquels vous voulez que les deux options sus-cit\u00e9es  fonctionnent. Et cliquez sur Ok pour fermer les R\u00e9glages. Maintenant, choisissez la troisi\u00e8me option ( Fonction \u00c9tendue) pour tous les types de fichiers concern\u00e9s dans le dialogue de r\u00e9glage de 'Documents', et c'est tout :)  ",
         "description": ""
     },
     "by": {
