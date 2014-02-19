@@ -2,10 +2,10 @@
 	"name"				: "Documents",
 	"description"		: "__MSG_description__",
 	"developer"			: {"name" : "Christoph D."},
-	"homepage_url"		: "http://my.opera.com/christoph142/blog",
+	"homepage_url"		: "http://christoph142.wordpress.com",
 	
 	"default_locale"	: "en",
-	"version"			: "3.0",
+	"version"			: "3.0.1",
 	"icons"				: { "16": "images/contextmenu.png", "128": "images/icon@2x.png" },
 	
 	"content_scripts" :
@@ -16,7 +16,7 @@
 		  "all_frames"	: true
 	}],
 	
-	"background"		: {"scripts": ["background.js"]},
+	"background"		: { "scripts" : ["background.js"], "persistent" : false},
 	
 	"permissions"		: ["storage"],
 	"options_page"		: "options/options.html",

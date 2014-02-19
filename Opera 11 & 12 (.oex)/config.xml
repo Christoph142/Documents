@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" defaultlocale="en" version="2.2">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://github.com/Christoph142/Documents" defaultlocale="en" version="2.2.1">
 
 	<name>Documents</name>
-	<author href="http://my.opera.com/christoph142/blog">Christoph D.</author>
+	<author href="https://christoph142.wordpress.com">Christoph D.</author>
 	<icon src="images/icon.png"/>
 	
 	<description xml:lang="ar">مستعرض للملفات على الإنترنت (مثال: وورد، بي دي أف... الخ) دون الحاجة لبرامج اضافية</description>
