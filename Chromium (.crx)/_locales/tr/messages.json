@@ -4,23 +4,23 @@
         "description": ""
     },
     "description": {
-        "message": "\u00c7evrimi\u00e7i belgeler i\u00e7in g\u00f6r\u00fcnt\u00fcleyici (\u00f6rn. PDF, MS Word)",
+        "message": "Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)",
         "description": ""
     },
     "0old": {
-        "message": "Documents taraf\u0131ndan kullan\u0131lamad\u0131",
+        "message": "Documents tarafından kullanılamadı",
         "description": ""
     },
     "footer": {
-        "message": "Bu eklentiyi kurdu\u011funuz i\u00e7in te\u015fekk\u00fcrler. Geri bildirim ve yorumlar i\u00e7in benimle ileti\u015fime ge\u00e7mekten \u00e7ekinmeyin",
+        "message": "Bu eklentiyi kurduğunuz için teşekkürler. Geri bildirim ve yorumlar için benimle iletişime geçmekten çekinmeyin",
         "description": ""
     },
     "save_file_rightclick": {
-        "message": "Dosyay\u0131 kaydetmek i\u00e7in buraya sa\u011f t\u0131klay\u0131n ve \"Hedefi farkl\u0131 kaydet...\" i se\u00e7in",
+        "message": "Dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin",
         "description": ""
     },
     "0new": {
-        "message": "sadece i\u00e7erik men\u00fcs\u00fcn\u00fc kullan",
+        "message": "sadece içerik menüsünü kullan",
         "description": ""
     },
     "Options": {
@@ -28,11 +28,11 @@
         "description": ""
     },
     "1": {
-        "message": "temel fonksiyon (linkler Documents taraf\u0131ndan a\u00e7\u0131l\u0131r; standart)",
+        "message": "temel fonksiyon (linkler Documents tarafından açılır; standart)",
         "description": ""
     },
     "2": {
-        "message": "geli\u015fmi\u015f fonksiyon (temel + geli\u015fmi\u015f fonksiyon; e\u011fer ekstradan kurulum yapt\u0131ysan\u0131z (a\u015fa\u011f\u0131ya bak\u0131n\u0131z); Attention: local files can't be viewed in Opera anymore)",
+        "message": "gelişmiş fonksiyon (temel + gelişmiş fonksiyon; eğer ekstradan kurulum yaptıysanız (aşağıya bakınız); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "bugreport": {
@@ -40,15 +40,15 @@
         "description": ""
     },
     "save_file": {
-        "message": "Dosyay\u0131 kaydet (Ctrl+S)",
+        "message": "Dosyayı kaydet (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
-        "message": "Bu eklentiyle hangi belge t\u00fcrlerini ili\u015fkilendirmek istiyorsunuz?",
+        "message": "Bu eklentiyle hangi belge türlerini ilişkilendirmek istiyorsunuz?",
         "description": ""
     },
     "manual_setup_instruction": {
-        "message": "Adres sat\u0131r\u0131na yap\u0131\u015ft\u0131rd\u0131\u011f\u0131n\u0131z, ta\u015f\u0131d\u0131\u011f\u0131n\u0131z veya tarama ge\u00e7mi\u015finizden se\u00e7ti\u011finiz se\u00e7ti\u011finiz linkleri Documents ile a\u00e7mak i\u00e7in: <br>1. Ayarlar -> Tercihler (k. Ctr+F12) -> Geli\u015fmi\u015f -> \u0130ndirmeler<br>2. \"Opera\"yla a\u00e7\u0131lan dosya t\u00fcr\u00fcn\u00fc gizle\" i\u015faretini kald\u0131r\u0131n.<br>Listeden desteklenen uzant\u0131lar\u0131 se\u00e7in. (pdf gibi) ve d\u00fczenleye t\u0131klay\u0131n.<br>\"Opera\"yla a\u00e7\"  ve Tamama t\u0131klay\u0131n.<br><br>3. ve 4. ad\u0131mlar\u0131 desteklenmesini istedi\u011finiz her uzant\u0131 i\u00e7in tekrar yap\u0131n. Tercihleri kapatmak i\u00e7in Tamam d\u00fc\u011fmesine t\u0131klay\u0131n. \u015eimdi ise Documents i\u00e7in d\u00fc\u015f\u00fcnd\u00fc\u011f\u00fcn\u00fcz t\u00fcm dosya tipleri i\u00e7in \u00fc\u00e7\u00fcnc\u00fc se\u00e7ene\u011fi (geli\u015fmi\u015f fonksiyon) i\u015faretleyin ve halloldu :)",
+        "message": "Adres satırına yapıştırdığınız, taşıdığınız veya tarama geçmişinizden seçtiğiniz seçtiğiniz linkleri Documents ile açmak için: <br>1. Ayarlar -> Tercihler (k. Ctr+F12) -> Gelişmiş -> İndirmeler<br>2. \"Opera\"yla açılan dosya türünü gizle\" işaretini kaldırın.<br>Listeden desteklenen uzantıları seçin. (pdf gibi) ve düzenleye tıklayın.<br>\"Opera\"yla aç\"  ve Tamama tıklayın.<br><br>3. ve 4. adımları desteklenmesini istediğiniz her uzantı için tekrar yapın. Tercihleri kapatmak için Tamam düğmesine tıklayın. Şimdi ise Documents için düşündüğünüz tüm dosya tipleri için üçüncü seçeneği (gelişmiş fonksiyon) işaretleyin ve halloldu :)",
         "description": ""
     },
     "by": {

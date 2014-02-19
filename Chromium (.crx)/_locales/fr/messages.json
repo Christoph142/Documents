@@ -8,15 +8,15 @@
         "description": ""
     },
     "0old": {
-        "message": "pas trait\u00e9es par Documents",
+        "message": "pas traitées par Documents",
         "description": ""
     },
     "footer": {
-        "message": "Merci d'avoir install\u00e9 cette extension. Tu peux me contacter toujours pour des commentaires et des questions.",
+        "message": "Merci d'avoir installé cette extension. Tu peux me contacter toujours pour des commentaires et des questions.",
         "description": ""
     },
     "save_file_rightclick": {
-        "message": "Fais un clic droit ici et choisis \"Enregistrer le contenu li\u00e9 sous ... \" pour t\u00e9l\u00e9charger ce fichier",
+        "message": "Fais un clic droit ici et choisis \"Enregistrer le contenu lié sous ... \" pour télécharger ce fichier",
         "description": ""
     },
     "0new": {
@@ -32,7 +32,7 @@
         "description": ""
     },
     "2": {
-        "message": "fonction \u00e9tendue (fonction de base + fonctions \u00e9tendues; choisi si tu as fait la configuration suppl\u00e9mentaire (voir ci-dessous); Attention: local files can't be viewed in Opera anymore)",
+        "message": "fonction étendue (fonction de base + fonctions étendues; choisi si tu as fait la configuration supplémentaire (voir ci-dessous); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "bugreport": {
@@ -48,7 +48,7 @@
         "description": ""
     },
     "manual_setup_instruction": {
-        "message": "Pour rendre les liens, que vous avez gliss\u00e9 ou coll\u00e9 \u00e0 la barre d'adresse ou s\u00e9lectionn\u00e9 dans votre historique de navigation, fonctionnent, veuillez faire le suivant: \n1. Allez sur  R\u00e9glages -> Pr\u00e9f\u00e9rences (Ctrl+F12) -> Avanc\u00e9 -> T\u00e9l\u00e9chargements\n2. d\u00e9cochez 'cacher ceux ouvert par Opera' \n3. Maintenant, choisissez toute extension support\u00e9e dans la liste (ex. PDF) et cliquez sur \u00e9diter.\n4.Cochez 'Ouvrir avec Opera' et cliquez sur OK\nr\u00e9p\u00e9tez les \u00e9tapes 3 et 4 avec tous les types de fichiers support\u00e9s avec lesquels vous voulez que les deux options sus-cit\u00e9es  fonctionnent. Et cliquez sur Ok pour fermer les R\u00e9glages. Maintenant, choisissez la troisi\u00e8me option ( Fonction \u00c9tendue) pour tous les types de fichiers concern\u00e9s dans le dialogue de r\u00e9glage de 'Documents', et c'est tout :)  ",
+        "message": "Pour rendre les liens, que vous avez glissé ou collé à la barre d'adresse ou sélectionné dans votre historique de navigation, fonctionnent, veuillez faire le suivant: \n1. Allez sur  Réglages -> Préférences (Ctrl+F12) -> Avancé -> Téléchargements\n2. décochez 'cacher ceux ouvert par Opera' \n3. Maintenant, choisissez toute extension supportée dans la liste (ex. PDF) et cliquez sur éditer.\n4.Cochez 'Ouvrir avec Opera' et cliquez sur OK\nrépétez les étapes 3 et 4 avec tous les types de fichiers supportés avec lesquels vous voulez que les deux options sus-citées  fonctionnent. Et cliquez sur Ok pour fermer les Réglages. Maintenant, choisissez la troisième option ( Fonction Étendue) pour tous les types de fichiers concernés dans le dialogue de réglage de 'Documents', et c'est tout :)  ",
         "description": ""
     },
     "by": {

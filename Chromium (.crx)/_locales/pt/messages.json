@@ -1,50 +1,50 @@
 {
     "lang": {
-        "message": "cs",
+        "message": "en",
         "description": ""
     },
     "description": {
-        "message": "Prohlížeč pro on-line dokumenty (např. PDF, MS Word)",
+        "message": "Viewer for online documents (e.g. PDF, MS Word)",
         "description": ""
     },
     "0old": {
-        "message": "neřeší rozšíření Documents",
+        "message": "not handled by Documents",
         "description": ""
     },
     "footer": {
-        "message": "Díky za instalování tohoto rozšíření. Kdykoli mě můžete kontaktovat pro zpětnou vazbu a v případě otázek.",
+        "message": "Thanks for installing this extension. You can contact me at any time for feedback and questions.",
         "description": ""
     },
     "save_file_rightclick": {
-        "message": "Zde klikněte pravým tlačítkem myši a vyberte \"Uložit obsah jako...\" pro stažení tohoto souboru",
+        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
         "description": ""
     },
     "0new": {
-        "message": "používat jen kontextové menu",
+        "message": "only use the context menu",
         "description": ""
     },
     "Options": {
-        "message": "Možnosti",
+        "message": "Options",
         "description": ""
     },
     "1": {
-        "message": "základní funkce (odkazy jsou otevřeny v Documents; standard)",
+        "message": "basic function (links are opened with Documents; standard)",
         "description": ""
     },
     "2": {
-        "message": "rozšířené funkce (základní + rozšířené funkce; vyberte, zda jste provedli další nastavení (podívejte se níže); Upozornění: lokální soubory nemůžou být zobrazovány v Opeře)",
+        "message": "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "bugreport": {
-        "message": "Nahlásit chybu",
+        "message": "Report an error",
         "description": ""
     },
     "save_file": {
-        "message": "Uložit soubor (Ctrl+S)",
+        "message": "Save file (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
-        "message": "S jakými typy dokumentů chcete, aby se toto rozšíření asociovalo?",
+        "message": "Which kinds of documents do you want to associate with this extension?",
         "description": ""
     },
     "manual_setup_instruction": {
@@ -52,11 +52,11 @@
         "description": ""
     },
     "by": {
-        "message": "od",
+        "message": "by",
         "description": ""
     },
     "rate_extension": {
-        "message": "Ohodnotit rozšíření Documents",
+        "message": "Rate Documents",
         "description": ""
     }
 }

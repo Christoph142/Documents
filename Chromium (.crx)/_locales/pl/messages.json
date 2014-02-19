@@ -4,15 +4,15 @@
         "description": ""
     },
     "description": {
-        "message": "Przegl\u0105darka dokument\u00f3w (np. PDF, MS Word) prosto z Sieci",
+        "message": "Przeglądarka dokumentów (np. PDF, MS Word) prosto z Sieci",
         "description": ""
     },
     "0old": {
-        "message": "Documents nie zajmuje si\u0119 tym formatem",
+        "message": "Documents nie zajmuje się tym formatem",
         "description": ""
     },
     "footer": {
-        "message": "Dzi\u0119ki, \u017ce zainstalowa\u0142a\u015b(-e\u015b) to rozszerzenie. Nie wahaj si\u0119 wysy\u0142a\u0107 mi opinii ani pyta\u0144",
+        "message": "Dzięki, że zainstalowałaś(-eś) to rozszerzenie. Nie wahaj się wysyłać mi opinii ani pytań",
         "description": ""
     },
     "save_file_rightclick": {
@@ -20,7 +20,7 @@
         "description": ""
     },
     "0new": {
-        "message": "jedynie menu podr\u0119czne",
+        "message": "jedynie menu podręczne",
         "description": ""
     },
     "Options": {
@@ -28,11 +28,11 @@
         "description": ""
     },
     "1": {
-        "message": "prosta obs\u0142uga (Documents otwiera dokumenty wywo\u0142ane klikni\u0119ciem \u0142\u0105cza; domy\u015blnie)",
+        "message": "prosta obsługa (Documents otwiera dokumenty wywołane kliknięciem łącza; domyślnie)",
         "description": ""
     },
     "2": {
-        "message": "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz ni\u017cej); Attention: local files can't be viewed in Opera anymore)",
+        "message": "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz niżej); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "bugreport": {
@@ -44,11 +44,11 @@
         "description": ""
     },
     "choosedocs": {
-        "message": "Dokumentami w kt\u00f3rych formatach ma si\u0119 zaj\u0105\u0107 rozszerzenie?",
+        "message": "Dokumentami w których formatach ma się zająć rozszerzenie?",
         "description": ""
     },
     "manual_setup_instruction": {
-        "message": "Aby otwiera\u0107 \u0142\u0105cza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co nast\u0119puje:<br>1. otw\u00f3rz Ustawienia \u2192 Preferencje (Ctrl+F12) \u2192 Zaawansowane \u2192 Pobieranie<br>2. odznacz \u201eUkryj typy plik\u00f3w obs\u0142ugiwane przez Oper\u0119\u201d<br>3. wybierz kt\u00f3re\u015b z rozszerze\u0144 obs\u0142ugiwanych przez rozszerzenie, np. pdf i kliknij \u201eEdytuj\u2026\u201d<br>4. zaznacz \u201eOtw\u00f3rz w Operze\u201d i zatwierd\u017a<br><br>Kroki 3 i 4 powt\u00f3rz dla ka\u017cdego typu pliku, kt\u00f3ry ma by\u0107 obs\u0142ugiwany w wy\u017cej wymienionych sytuacjach. Po tym klikaj\u0105c OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzeci\u0105 z opcji (zaawansowana obsuga) wobec w\u0142a\u015bnie ustawionych format\u00f3w . To wszystko :)",
+        "message": "Aby otwierać łącza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co następuje:<br>1. otwórz Ustawienia → Preferencje (Ctrl+F12) → Zaawansowane → Pobieranie<br>2. odznacz „Ukryj typy plików obsługiwane przez Operę”<br>3. wybierz któreś z rozszerzeń obsługiwanych przez rozszerzenie, np. pdf i kliknij „Edytuj…”<br>4. zaznacz „Otwórz w Operze” i zatwierdź<br><br>Kroki 3 i 4 powtórz dla każdego typu pliku, który ma być obsługiwany w wyżej wymienionych sytuacjach. Po tym klikając OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzecią z opcji (zaawansowana obsuga) wobec właśnie ustawionych formatów . To wszystko :)",
         "description": ""
     },
     "by": {

@@ -1,50 +1,50 @@
 {
     "lang": {
-        "message": "cs",
+        "message": "en",
         "description": ""
     },
     "description": {
-        "message": "Prohlížeč pro on-line dokumenty (např. PDF, MS Word)",
+        "message": "Trình xem các tài liệu online (ví dụ PDF, tập tin Word)",
         "description": ""
     },
     "0old": {
-        "message": "neřeší rozšíření Documents",
+        "message": "không được quản lý bởi chương trình",
         "description": ""
     },
     "footer": {
-        "message": "Díky za instalování tohoto rozšíření. Kdykoli mě můžete kontaktovat pro zpětnou vazbu a v případě otázek.",
+        "message": "Cảm ơn bạn đã cài đặt tiện ích này. Bạn có thể liên lạc với tác giả bất kỳ lúc nào để gửi phản hồi hay các thắc mắc khi sử dụng.",
         "description": ""
     },
     "save_file_rightclick": {
-        "message": "Zde klikněte pravým tlačítkem myši a vyberte \"Uložit obsah jako...\" pro stažení tohoto souboru",
+        "message": "Click chuột phải tại đây và chọn \"Save Linked Content as...\" để tải về tập tin này",
         "description": ""
     },
     "0new": {
-        "message": "používat jen kontextové menu",
+        "message": "chỉ sử dụng menu khi click chuột phải",
         "description": ""
     },
     "Options": {
-        "message": "Možnosti",
+        "message": "Options",
         "description": ""
     },
     "1": {
-        "message": "základní funkce (odkazy jsou otevřeny v Documents; standard)",
+        "message": "chức năng cơ bản (các liên kết được mở kèm theo tài liệu; dạng tiêu chuẩn)",
         "description": ""
     },
     "2": {
-        "message": "rozšířené funkce (základní + rozšířené funkce; vyberte, zda jste provedli další nastavení (podívejte se níže); Upozornění: lokální soubory nemůžou být zobrazovány v Opeře)",
+        "message": "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "bugreport": {
-        "message": "Nahlásit chybu",
+        "message": "Gửi báo cáo lỗi",
         "description": ""
     },
     "save_file": {
-        "message": "Uložit soubor (Ctrl+S)",
+        "message": "Save file (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
-        "message": "S jakými typy dokumentů chcete, aby se toto rozšíření asociovalo?",
+        "message": "Which kinds of documents do you want to associate with this extension?",
         "description": ""
     },
     "manual_setup_instruction": {
@@ -52,11 +52,11 @@
         "description": ""
     },
     "by": {
-        "message": "od",
+        "message": "bởi",
         "description": ""
     },
     "rate_extension": {
-        "message": "Ohodnotit rozšíření Documents",
+        "message": "Rate Documents",
         "description": ""
     }
 }
