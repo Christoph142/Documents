@@ -8,8 +8,8 @@
 	<description xml:lang="ar">مستعرض للملفات على الإنترنت (مثال: وورد، بي دي أف... الخ) دون الحاجة لبرامج اضافية</description>
 	<description xml:lang="de">Viewer für Online-Dokumente (z.B. PDF, MS Word)</description>
 	<description xml:lang="en">Viewer for online documents (e.g. PDF, MS Word)</description>
-    <description xml:lang="fr">Viewer pour les documents onlines (p.e. PDF, MS Word)</description>
-    <description xml:lang="pl">Przeglądarka dokumentów (np. PDF, MS Word) prosto z Sieci</description>
+    	<description xml:lang="fr">Viewer pour les documents onlines (p.e. PDF, MS Word)</description>
+    	<description xml:lang="pl">Przeglądarka dokumentów (np. PDF, MS Word) prosto z Sieci</description>
 	<description xml:lang="tr">Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)</description>
 	
 	<feature name="opera:contextmenus" required="false" />
