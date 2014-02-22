@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "de",
-        "description": ""
-    },
-    "description": {
-        "message": "Viewer für Online-Dokumente (z.B. PDF, MS Word)",
-        "description": ""
-    },
     "0old": {
         "message": "nicht mit Documents öffnen",
-        "description": ""
-    },
-    "footer": {
-        "message": "Für Feedback, Fragen und Wünsche könnt ihr mich gerne auch direkt kontaktieren",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Klicke hier mit der rechten Maustaste und wähle \"Verlinkten Inhalt speichern als...\" um die Datei herunterzuladen",
-        "description": ""
-    },
-    "0new": {
-        "message": "nur das Kontextmenü benutzen",
-        "description": ""
-    },
-    "Options": {
-        "message": "Optionen",
-        "description": ""
-    },
-    "1": {
-        "message": "Basis-Funktion (Links werden mit Documents geöffnet; Standard)",
-        "description": ""
-    },
-    "2": {
-        "message": "Erweitert (Basis- & erweiterte Funktionen; auswählen, wenn das zusätzliche Setup (siehe unten) konfiguriert wurde; Vorsicht: lokale Dateien können nicht mehr in Opera angezeigt werden)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Melde einen Fehler",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Datei speichern (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
         "message": "Welche Dokumente sollen mit dieser Erweiterung geöffnet werden?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "Damit in die Adress-Leiste eingefügte oder gezogene Links und Dateien, die über die History aufgerufen werden unterstützt werden musst du folgendes tun:<br>1. rufe Einstellungen -> Einstellungen... (Strg+F12) -> Erweitert -> Downloads auf<br>2. deaktiviere 'In Opera zu öffnende Dateitypen ausblenden'<br>3. wähle ein beliebiges unterstütztes Format (z.B. pdf) und klicke auf 'Bearbeiten...'<br>4. wähle 'Mit Opera öffnen' und klicke 'OK'<br><br>Wiederhole Schritte 3 und 4 für jeden unterstützten Datei-Typ für den die beiden oben genannten Features funktionieren sollen. Bestätige am Ende mit 'OK' um die Einstellungen zu schließen. Jetzt wähle in den Einstellungen von Documents die 3. Option (Erweitert) für die ausgewählten Dateitypen und es kann losgehn :)",
+    "2": {
+        "message": "Erweitert (Basis- & erweiterte Funktionen; auswählen, wenn das zusätzliche Setup (siehe unten) konfiguriert wurde; Vorsicht: lokale Dateien können nicht mehr in Opera angezeigt werden)",
         "description": ""
     },
     "by": {
         "message": "von",
         "description": ""
     },
+    "1": {
+        "message": "Basis-Funktion (Links werden mit Documents geöffnet; Standard)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Bewerte Documents",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Klicke hier mit der rechten Maustaste und wähle \"Verlinkten Inhalt speichern als...\" um die Datei herunterzuladen",
+        "description": ""
+    },
+    "footer": {
+        "message": "Für Feedback, Fragen und Wünsche könnt ihr mich gerne auch direkt kontaktieren",
+        "description": ""
+    },
+    "lang": {
+        "message": "de",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Damit in die Adress-Leiste eingefügte oder gezogene Links und Dateien, die über die History aufgerufen werden unterstützt werden musst du folgendes tun:<br>1. rufe Einstellungen -> Einstellungen... (Strg+F12) -> Erweitert -> Downloads auf<br>2. deaktiviere 'In Opera zu öffnende Dateitypen ausblenden'<br>3. wähle ein beliebiges unterstütztes Format (z.B. pdf) und klicke auf 'Bearbeiten...'<br>4. wähle 'Mit Opera öffnen' und klicke 'OK'<br><br>Wiederhole Schritte 3 und 4 für jeden unterstützten Datei-Typ für den die beiden oben genannten Features funktionieren sollen. Bestätige am Ende mit 'OK' um die Einstellungen zu schließen. Jetzt wähle in den Einstellungen von Documents die 3. Option (Erweitert) für die ausgewählten Dateitypen und es kann losgehn :)",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Datei speichern (Ctrl+S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "nur das Kontextmenü benutzen",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Melde einen Fehler",
+        "description": ""
+    },
+    "Options": {
+        "message": "Optionen",
+        "description": ""
+    },
+    "description": {
+        "message": "Viewer für Online-Dokumente (z.B. PDF, MS Word)",
         "description": ""
     }
 }

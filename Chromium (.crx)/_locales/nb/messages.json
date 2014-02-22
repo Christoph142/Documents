@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "nb",
-        "description": ""
-    },
-    "description": {
-        "message": "Viewer for elektroniske dokumenter (f.eks PDF, MS Word)",
-        "description": ""
-    },
     "0old": {
         "message": "ikke håndtert av Documents",
-        "description": ""
-    },
-    "footer": {
-        "message": "Takk for at du installerte denne utvidelsen. Du kan kontakte meg (på engelsk) når som helst for å gi tilbakemelding og stille spørsmål.",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
-        "description": ""
-    },
-    "0new": {
-        "message": "only use the context menu",
-        "description": ""
-    },
-    "Options": {
-        "message": "Valg",
-        "description": ""
-    },
-    "1": {
-        "message": "standard funksjonalitet (lenker er åpnet med Dokumenter; forhåndsvalgt)",
-        "description": ""
-    },
-    "2": {
-        "message": "utvidet funksjonalitet (standard og utvidede funksjoner; velg dette om du har gjort andre valg (se under); Attention: local files can't be viewed in Opera anymore)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Rapportere en feil",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Lagre filen (Ctrl + S)",
         "description": ""
     },
     "choosedocs": {
         "message": "Hvilke dokumenttyper ønsker du å åpne med denne utvidelsen?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "Gjør følgende for å få lenker—som du har dratt og limt inn i adressefeltet eller valgt i historievisning—til å fungere:<br>1. Instillinger -> Valg (Ctrl+F12) -> Avansert -> Nedlastninger<br>2. avmerk 'skjul filtyper som åpnes med Opera'<br>3. velg en hvilkensomhelst støttet utvidelse fra listen (f.eks. pdf) og trykk Endre<br>4. velg 'Åpne med Opera' og klikk OK<br><br>Gjenta steg 3–4 for alle støttede filtyper. Trykk til slutt OK for å lukke Instillinger. Velg så utvidet funksjonalitet for de samme filtypene i valg for Dokumenter og du er ferdig :)",
+    "2": {
+        "message": "utvidet funksjonalitet (standard og utvidede funksjoner; velg dette om du har gjort andre valg (se under); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "by": {
         "message": "by",
         "description": ""
     },
+    "1": {
+        "message": "standard funksjonalitet (lenker er åpnet med Dokumenter; forhåndsvalgt)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Ranger Documents",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
+        "description": ""
+    },
+    "footer": {
+        "message": "Takk for at du installerte denne utvidelsen. Du kan kontakte meg (på engelsk) når som helst for å gi tilbakemelding og stille spørsmål.",
+        "description": ""
+    },
+    "lang": {
+        "message": "nb",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Gjør følgende for å få lenker—som du har dratt og limt inn i adressefeltet eller valgt i historievisning—til å fungere:<br>1. Instillinger -> Valg (Ctrl+F12) -> Avansert -> Nedlastninger<br>2. avmerk 'skjul filtyper som åpnes med Opera'<br>3. velg en hvilkensomhelst støttet utvidelse fra listen (f.eks. pdf) og trykk Endre<br>4. velg 'Åpne med Opera' og klikk OK<br><br>Gjenta steg 3–4 for alle støttede filtyper. Trykk til slutt OK for å lukke Instillinger. Velg så utvidet funksjonalitet for de samme filtypene i valg for Dokumenter og du er ferdig :)",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Lagre filen (Ctrl + S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "only use the context menu",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Rapportere en feil",
+        "description": ""
+    },
+    "Options": {
+        "message": "Valg",
+        "description": ""
+    },
+    "description": {
+        "message": "Viewer for elektroniske dokumenter (f.eks PDF, MS Word)",
         "description": ""
     }
 }

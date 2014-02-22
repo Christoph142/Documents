@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "pl",
-        "description": ""
-    },
-    "description": {
-        "message": "Przeglądarka dokumentów (np. PDF, MS Word) prosto z Sieci",
-        "description": ""
-    },
     "0old": {
         "message": "Documents nie zajmuje się tym formatem",
-        "description": ""
-    },
-    "footer": {
-        "message": "Dzięki, że zainstalowałaś(-eś) to rozszerzenie. Nie wahaj się wysyłać mi opinii ani pytań",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
-        "description": ""
-    },
-    "0new": {
-        "message": "jedynie menu podręczne",
-        "description": ""
-    },
-    "Options": {
-        "message": "Ustawienia",
-        "description": ""
-    },
-    "1": {
-        "message": "prosta obsługa (Documents otwiera dokumenty wywołane kliknięciem łącza; domyślnie)",
-        "description": ""
-    },
-    "2": {
-        "message": "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz niżej); Attention: local files can't be viewed in Opera anymore)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Report an error",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Save file (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
         "message": "Dokumentami w których formatach ma się zająć rozszerzenie?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "Aby otwierać łącza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co następuje:<br>1. otwórz Ustawienia → Preferencje (Ctrl+F12) → Zaawansowane → Pobieranie<br>2. odznacz „Ukryj typy plików obsługiwane przez Operę”<br>3. wybierz któreś z rozszerzeń obsługiwanych przez rozszerzenie, np. pdf i kliknij „Edytuj…”<br>4. zaznacz „Otwórz w Operze” i zatwierdź<br><br>Kroki 3 i 4 powtórz dla każdego typu pliku, który ma być obsługiwany w wyżej wymienionych sytuacjach. Po tym klikając OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzecią z opcji (zaawansowana obsuga) wobec właśnie ustawionych formatów . To wszystko :)",
+    "2": {
+        "message": "zaawansowana obsuga (wszystkie sposoby; wymaga dodatkowej konfiguracji (patrz niżej); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "by": {
         "message": "autorstwa",
         "description": ""
     },
+    "1": {
+        "message": "prosta obsługa (Documents otwiera dokumenty wywołane kliknięciem łącza; domyślnie)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Rate Documents",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Rightclick here and choose \"Save Linked Content as...\" to download this file",
+        "description": ""
+    },
+    "footer": {
+        "message": "Dzięki, że zainstalowałaś(-eś) to rozszerzenie. Nie wahaj się wysyłać mi opinii ani pytań",
+        "description": ""
+    },
+    "lang": {
+        "message": "pl",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Aby otwierać łącza upuszczone na lub wklejone w pasek adresu, albo wybrane z historii, wykonaj co następuje:<br>1. otwórz Ustawienia → Preferencje (Ctrl+F12) → Zaawansowane → Pobieranie<br>2. odznacz „Ukryj typy plików obsługiwane przez Operę”<br>3. wybierz któreś z rozszerzeń obsługiwanych przez rozszerzenie, np. pdf i kliknij „Edytuj…”<br>4. zaznacz „Otwórz w Operze” i zatwierdź<br><br>Kroki 3 i 4 powtórz dla każdego typu pliku, który ma być obsługiwany w wyżej wymienionych sytuacjach. Po tym klikając OK zamknij okno preferencji. Teraz zaznacz na tej stronie trzecią z opcji (zaawansowana obsuga) wobec właśnie ustawionych formatów . To wszystko :)",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Save file (Ctrl+S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "jedynie menu podręczne",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Report an error",
+        "description": ""
+    },
+    "Options": {
+        "message": "Ustawienia",
+        "description": ""
+    },
+    "description": {
+        "message": "Przeglądarka dokumentów (np. PDF, MS Word) prosto z Sieci",
         "description": ""
     }
 }

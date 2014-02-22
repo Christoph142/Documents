@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "tr",
-        "description": ""
-    },
-    "description": {
-        "message": "Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)",
-        "description": ""
-    },
     "0old": {
         "message": "Documents tarafından kullanılamadı",
-        "description": ""
-    },
-    "footer": {
-        "message": "Bu eklentiyi kurduğunuz için teşekkürler. Geri bildirim ve yorumlar için benimle iletişime geçmekten çekinmeyin",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin",
-        "description": ""
-    },
-    "0new": {
-        "message": "sadece içerik menüsünü kullan",
-        "description": ""
-    },
-    "Options": {
-        "message": "Ayarlar",
-        "description": ""
-    },
-    "1": {
-        "message": "temel fonksiyon (linkler Documents tarafından açılır; standart)",
-        "description": ""
-    },
-    "2": {
-        "message": "gelişmiş fonksiyon (temel + gelişmiş fonksiyon; eğer ekstradan kurulum yaptıysanız (aşağıya bakınız); Attention: local files can't be viewed in Opera anymore)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Hata bildir",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Dosyayı kaydet (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
         "message": "Bu eklentiyle hangi belge türlerini ilişkilendirmek istiyorsunuz?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "Adres satırına yapıştırdığınız, taşıdığınız veya tarama geçmişinizden seçtiğiniz seçtiğiniz linkleri Documents ile açmak için: <br>1. Ayarlar -> Tercihler (k. Ctr+F12) -> Gelişmiş -> İndirmeler<br>2. \"Opera\"yla açılan dosya türünü gizle\" işaretini kaldırın.<br>Listeden desteklenen uzantıları seçin. (pdf gibi) ve düzenleye tıklayın.<br>\"Opera\"yla aç\"  ve Tamama tıklayın.<br><br>3. ve 4. adımları desteklenmesini istediğiniz her uzantı için tekrar yapın. Tercihleri kapatmak için Tamam düğmesine tıklayın. Şimdi ise Documents için düşündüğünüz tüm dosya tipleri için üçüncü seçeneği (gelişmiş fonksiyon) işaretleyin ve halloldu :)",
+    "2": {
+        "message": "gelişmiş fonksiyon (temel + gelişmiş fonksiyon; eğer ekstradan kurulum yaptıysanız (aşağıya bakınız); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "by": {
         "message": "by",
         "description": ""
     },
+    "1": {
+        "message": "temel fonksiyon (linkler Documents tarafından açılır; standart)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Documents'i oyla",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Dosyayı kaydetmek için buraya sağ tıklayın ve \"Hedefi farklı kaydet...\" i seçin",
+        "description": ""
+    },
+    "footer": {
+        "message": "Bu eklentiyi kurduğunuz için teşekkürler. Geri bildirim ve yorumlar için benimle iletişime geçmekten çekinmeyin",
+        "description": ""
+    },
+    "lang": {
+        "message": "tr",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Adres satırına yapıştırdığınız, taşıdığınız veya tarama geçmişinizden seçtiğiniz seçtiğiniz linkleri Documents ile açmak için: <br>1. Ayarlar -> Tercihler (k. Ctr+F12) -> Gelişmiş -> İndirmeler<br>2. \"Opera\"yla açılan dosya türünü gizle\" işaretini kaldırın.<br>Listeden desteklenen uzantıları seçin. (pdf gibi) ve düzenleye tıklayın.<br>\"Opera\"yla aç\"  ve Tamama tıklayın.<br><br>3. ve 4. adımları desteklenmesini istediğiniz her uzantı için tekrar yapın. Tercihleri kapatmak için Tamam düğmesine tıklayın. Şimdi ise Documents için düşündüğünüz tüm dosya tipleri için üçüncü seçeneği (gelişmiş fonksiyon) işaretleyin ve halloldu :)",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Dosyayı kaydet (Ctrl+S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "sadece içerik menüsünü kullan",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Hata bildir",
+        "description": ""
+    },
+    "Options": {
+        "message": "Ayarlar",
+        "description": ""
+    },
+    "description": {
+        "message": "Çevrimiçi belgeler için görüntüleyici (örn. PDF, MS Word)",
         "description": ""
     }
 }

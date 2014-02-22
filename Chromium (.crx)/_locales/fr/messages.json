@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "fr",
-        "description": ""
-    },
-    "description": {
-        "message": "Viewer pour les documents onlines (p.e. PDF, MS Word)",
-        "description": ""
-    },
     "0old": {
         "message": "pas traitées par Documents",
-        "description": ""
-    },
-    "footer": {
-        "message": "Merci d'avoir installé cette extension. Tu peux me contacter toujours pour des commentaires et des questions.",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Fais un clic droit ici et choisis \"Enregistrer le contenu lié sous ... \" pour télécharger ce fichier",
-        "description": ""
-    },
-    "0new": {
-        "message": "seulement utilise le menu contextuel",
-        "description": ""
-    },
-    "Options": {
-        "message": "Options",
-        "description": ""
-    },
-    "1": {
-        "message": "fonction de base (les liens sont ouverts avec Documents; standard)",
-        "description": ""
-    },
-    "2": {
-        "message": "fonction étendue (fonction de base + fonctions étendues; choisi si tu as fait la configuration supplémentaire (voir ci-dessous); Attention: local files can't be viewed in Opera anymore)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Rapporte une erreur",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Enregistre le fichier (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
         "message": "Quels types de documents veux-tu obtenir ouvert par cette extension?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "Pour rendre les liens, que vous avez glissé ou collé à la barre d'adresse ou sélectionné dans votre historique de navigation, fonctionnent, veuillez faire le suivant: \n1. Allez sur  Réglages -> Préférences (Ctrl+F12) -> Avancé -> Téléchargements\n2. décochez 'cacher ceux ouvert par Opera' \n3. Maintenant, choisissez toute extension supportée dans la liste (ex. PDF) et cliquez sur éditer.\n4.Cochez 'Ouvrir avec Opera' et cliquez sur OK\nrépétez les étapes 3 et 4 avec tous les types de fichiers supportés avec lesquels vous voulez que les deux options sus-citées  fonctionnent. Et cliquez sur Ok pour fermer les Réglages. Maintenant, choisissez la troisième option ( Fonction Étendue) pour tous les types de fichiers concernés dans le dialogue de réglage de 'Documents', et c'est tout :)  ",
+    "2": {
+        "message": "fonction étendue (fonction de base + fonctions étendues; choisi si tu as fait la configuration supplémentaire (voir ci-dessous); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "by": {
         "message": "de",
         "description": ""
     },
+    "1": {
+        "message": "fonction de base (les liens sont ouverts avec Documents; standard)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Evalue Documents",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Fais un clic droit ici et choisis \"Enregistrer le contenu lié sous ... \" pour télécharger ce fichier",
+        "description": ""
+    },
+    "footer": {
+        "message": "Merci d'avoir installé cette extension. Tu peux me contacter toujours pour des commentaires et des questions.",
+        "description": ""
+    },
+    "lang": {
+        "message": "fr",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "Pour rendre les liens, que vous avez glissé ou collé à la barre d'adresse ou sélectionné dans votre historique de navigation, fonctionnent, veuillez faire le suivant: \n1. Allez sur  Réglages -> Préférences (Ctrl+F12) -> Avancé -> Téléchargements\n2. décochez 'cacher ceux ouvert par Opera' \n3. Maintenant, choisissez toute extension supportée dans la liste (ex. PDF) et cliquez sur éditer.\n4.Cochez 'Ouvrir avec Opera' et cliquez sur OK\nrépétez les étapes 3 et 4 avec tous les types de fichiers supportés avec lesquels vous voulez que les deux options sus-citées  fonctionnent. Et cliquez sur Ok pour fermer les Réglages. Maintenant, choisissez la troisième option ( Fonction Étendue) pour tous les types de fichiers concernés dans le dialogue de réglage de 'Documents', et c'est tout :)  ",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Enregistre le fichier (Ctrl+S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "seulement utilise le menu contextuel",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Rapporte une erreur",
+        "description": ""
+    },
+    "Options": {
+        "message": "Options",
+        "description": ""
+    },
+    "description": {
+        "message": "Viewer pour les documents onlines (p.e. PDF, MS Word)",
         "description": ""
     }
 }

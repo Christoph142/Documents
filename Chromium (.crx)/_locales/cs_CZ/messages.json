@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "cs",
-        "description": ""
-    },
-    "description": {
-        "message": "Prohlížeč pro on-line dokumenty (např. PDF, MS Word)",
-        "description": ""
-    },
     "0old": {
         "message": "neřeší rozšíření Documents",
-        "description": ""
-    },
-    "footer": {
-        "message": "Díky za instalování tohoto rozšíření. Kdykoli mě můžete kontaktovat pro zpětnou vazbu a v případě otázek.",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Zde klikněte pravým tlačítkem myši a vyberte \"Uložit obsah jako...\" pro stažení tohoto souboru",
-        "description": ""
-    },
-    "0new": {
-        "message": "používat jen kontextové menu",
-        "description": ""
-    },
-    "Options": {
-        "message": "Možnosti",
-        "description": ""
-    },
-    "1": {
-        "message": "základní funkce (odkazy jsou otevřeny v Documents; standard)",
-        "description": ""
-    },
-    "2": {
-        "message": "rozšířené funkce (základní + rozšířené funkce; vyberte, zda jste provedli další nastavení (podívejte se níže); Upozornění: lokální soubory nemůžou být zobrazovány v Opeře)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Nahlásit chybu",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Uložit soubor (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
         "message": "S jakými typy dokumentů chcete, aby se toto rozšíření asociovalo?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+    "2": {
+        "message": "rozšířené funkce (základní + rozšířené funkce; vyberte, zda jste provedli další nastavení (podívejte se níže); Upozornění: lokální soubory nemůžou být zobrazovány v Opeře)",
         "description": ""
     },
     "by": {
         "message": "od",
         "description": ""
     },
+    "1": {
+        "message": "základní funkce (odkazy jsou otevřeny v Documents; standard)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Ohodnotit rozšíření Documents",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Zde klikněte pravým tlačítkem myši a vyberte \"Uložit obsah jako...\" pro stažení tohoto souboru",
+        "description": ""
+    },
+    "footer": {
+        "message": "Díky za instalování tohoto rozšíření. Kdykoli mě můžete kontaktovat pro zpětnou vazbu a v případě otázek.",
+        "description": ""
+    },
+    "lang": {
+        "message": "cs",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Uložit soubor (Ctrl+S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "používat jen kontextové menu",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Nahlásit chybu",
+        "description": ""
+    },
+    "Options": {
+        "message": "Možnosti",
+        "description": ""
+    },
+    "description": {
+        "message": "Prohlížeč pro on-line dokumenty (např. PDF, MS Word)",
         "description": ""
     }
 }

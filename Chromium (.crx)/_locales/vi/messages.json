@@ -1,62 +1,62 @@
 {
-    "lang": {
-        "message": "en",
-        "description": ""
-    },
-    "description": {
-        "message": "Trình xem các tài liệu online (ví dụ PDF, tập tin Word)",
-        "description": ""
-    },
     "0old": {
         "message": "không được quản lý bởi chương trình",
-        "description": ""
-    },
-    "footer": {
-        "message": "Cảm ơn bạn đã cài đặt tiện ích này. Bạn có thể liên lạc với tác giả bất kỳ lúc nào để gửi phản hồi hay các thắc mắc khi sử dụng.",
-        "description": ""
-    },
-    "save_file_rightclick": {
-        "message": "Click chuột phải tại đây và chọn \"Save Linked Content as...\" để tải về tập tin này",
-        "description": ""
-    },
-    "0new": {
-        "message": "chỉ sử dụng menu khi click chuột phải",
-        "description": ""
-    },
-    "Options": {
-        "message": "Options",
-        "description": ""
-    },
-    "1": {
-        "message": "chức năng cơ bản (các liên kết được mở kèm theo tài liệu; dạng tiêu chuẩn)",
-        "description": ""
-    },
-    "2": {
-        "message": "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
-        "description": ""
-    },
-    "bugreport": {
-        "message": "Gửi báo cáo lỗi",
-        "description": ""
-    },
-    "save_file": {
-        "message": "Save file (Ctrl+S)",
         "description": ""
     },
     "choosedocs": {
         "message": "Which kinds of documents do you want to associate with this extension?",
         "description": ""
     },
-    "manual_setup_instruction": {
-        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+    "2": {
+        "message": "extended function (basic + extended functions; choose if you did the additional setup (see below); Attention: local files can't be viewed in Opera anymore)",
         "description": ""
     },
     "by": {
         "message": "bởi",
         "description": ""
     },
+    "1": {
+        "message": "chức năng cơ bản (các liên kết được mở kèm theo tài liệu; dạng tiêu chuẩn)",
+        "description": ""
+    },
     "rate_extension": {
         "message": "Rate Documents",
+        "description": ""
+    },
+    "save_file_rightclick": {
+        "message": "Click chuột phải tại đây và chọn \"Save Linked Content as...\" để tải về tập tin này",
+        "description": ""
+    },
+    "footer": {
+        "message": "Cảm ơn bạn đã cài đặt tiện ích này. Bạn có thể liên lạc với tác giả bất kỳ lúc nào để gửi phản hồi hay các thắc mắc khi sử dụng.",
+        "description": ""
+    },
+    "lang": {
+        "message": "en",
+        "description": ""
+    },
+    "manual_setup_instruction": {
+        "message": "To make links, which you dragged or pasted into the address bar or selected in your browsing history work, do the following:<br>1. go to Settings -> Preferences (Ctrl+F12) -> Advanced -> Downloads<br>2. uncheck 'hide file types opened with Opera'<br>3. now choose any supported extension in the list (e.g. pdf) and click edit<br>4. select 'Open with Opera' and click OK<br><br>Repeat steps 3 and 4 for every supported file type you want the two aforementioned features to work. Then press OK to close Settings. Now choose the third option (extended function) for all concerned file types in Documents settings dialog and you're all set :)",
+        "description": ""
+    },
+    "save_file": {
+        "message": "Save file (Ctrl+S)",
+        "description": ""
+    },
+    "0new": {
+        "message": "chỉ sử dụng menu khi click chuột phải",
+        "description": ""
+    },
+    "bugreport": {
+        "message": "Gửi báo cáo lỗi",
+        "description": ""
+    },
+    "Options": {
+        "message": "Options",
+        "description": ""
+    },
+    "description": {
+        "message": "Trình xem các tài liệu online (ví dụ PDF, tập tin Word)",
         "description": ""
     }
 }
