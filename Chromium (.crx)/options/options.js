@@ -1,11 +1,17 @@
-window.addEventListener("load", init, false);
-w = chrome.extension.getBackgroundPage().w;
+var ready = 0;
 
-function init()
-{
+window.addEventListener("load", function(){
 	localize();
-	init_inputs();
-}
+	if(ready === 1) init_inputs();
+	else 			ready++;
+}, false);
+
+chrome.runtime.getBackgroundPage( function (bg){
+	w = bg.w;
+
+	if(ready === 1) init_inputs();
+	else 			ready++;
+});
 
 function localize()
 {
@@ -31,8 +37,11 @@ function save_prefs()
 	
 	var saveobject = {};
 	saveobject[key] = value;
-	chrome.storage.sync.set(saveobject);					// save it in Chrome's synced storage
-	chrome.extension.getBackgroundPage().w[key] = value;	// update settings in background.js
+	chrome.storage.sync.set(saveobject); // save it in Chrome's synced storage
+	chrome.runtime.getBackgroundPage( function (bg){
+		bg.w[key] = value;	// update settings in background.js
+	});
+	w[key] = value; // update local copy of settings object
 	
 	set_wanted_docs();
 }
@@ -47,8 +56,10 @@ function set_wanted_docs(){
 		if(w[doctype] === "1") wanted_docs += possible_docs[doctype];
 	}
 	
-	chrome.storage.sync.set({ "wanted_docs" : wanted_docs });				// save it in Chrome's synced storage
-	chrome.extension.getBackgroundPage().w["wanted_docs"] = wanted_docs;	// update settings in background.js
+	chrome.storage.sync.set({ "wanted_docs" : wanted_docs }); // save it in Chrome's synced storage
+	chrome.runtime.getBackgroundPage( function (bg){
+		bg.w["wanted_docs"] = wanted_docs;	// update settings in background.js
+	});
 	
 	function insert_separator(next_filetype){
 		if(wanted_docs.length > 1 && wanted_docs[wanted_docs.length-1] !== "|" && w[next_filetype] !== "0") wanted_docs += "|";
