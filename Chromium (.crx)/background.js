@@ -22,5 +22,5 @@ function update_settings(){ chrome.storage.sync.get( null, function(storage){
 update_settings();
 
 chrome.extension.onMessage.addListener( function(request, sender, sendResponse){
-	if(request.data === "settings") sendResponse(w);
+	if(request.data === "settings") sendResponse( w.wanted_docs );
 });
